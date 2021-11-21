@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/level.gd" type="Script" id=2]
+[ext_resource path="res://scripts/MainBlock.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[node name="level" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="MainBlock" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1139.0
+margin_top = 34.0
+margin_right = 1326.0
+margin_bottom = 131.0
+custom_styles/normal = SubResource( 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
