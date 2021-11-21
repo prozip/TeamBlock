@@ -16,10 +16,10 @@ script = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1139.0
-margin_top = 34.0
-margin_right = 1326.0
-margin_bottom = 131.0
+margin_left = 1136.62
+margin_top = 201.678
+margin_right = 1323.62
+margin_bottom = 298.678
 custom_styles/normal = SubResource( 1 )
 text = "Restart"
 __meta__ = {
@@ -27,3 +27,5 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[editable path="MainBlock"]

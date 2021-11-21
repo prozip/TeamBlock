@@ -80,7 +80,8 @@ func _ready():
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))
 
-
 func _on_Button_pressed():
 	Autoload.full_reset()
 	get_tree().change_scene("res://scene/level.tscn")
+
+
