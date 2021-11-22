@@ -55,7 +55,7 @@ func read_file(filename):
 	var file = File.new()
 	#file.open("..//level//" + filename, File.READ)
 	file.open("..//level//" + filename, File.READ)	
-	var line = file.get_csv_line()
+	var line
 	while !file.eof_reached():
 		line = file.get_csv_line()
 		if line.size() > 1:
