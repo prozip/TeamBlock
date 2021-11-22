@@ -1,8 +1,8 @@
 extends Node
 
-var current_level = 0
-var path = "..//level//"
-var files = []
+onready var current_level = 0
+onready var path = "res://level//"
+onready var files = []
 
 var move = [true, true, true, true]
 var target_block = 0

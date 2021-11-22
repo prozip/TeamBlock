@@ -1,7 +1,7 @@
 extends Camera
 
 var position = Vector2()
-var drag_speed = 0.15
+var drag_speed = 0.1
 
 export(int,"disabled","single_drag","multi_drag") var movement_gesture = 2
 export(int,"disabled","pinch") var zoom_gesture = 1
