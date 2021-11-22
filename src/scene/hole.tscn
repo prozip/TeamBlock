@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[node name="hole" type="KinematicBody" groups=[
+"hole",
+]]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 6.758e-24, 1.81899e-12, 6.73316e-24, 1, -1.32349e-23, -1.81899e-12, -1.32349e-23, 1, 0, 0, 0 )
+shape = SubResource( 1 )

@@ -31,3 +31,6 @@ func _on_Area4_body_entered(body):
 func _on_Area5_body_entered(body):
 	if body.is_in_group("target"):
 		body.on_collide()
+	elif body.is_in_group("hole"):
+		$AnimationPlayer.play("fall")
+		#self.queue_free()

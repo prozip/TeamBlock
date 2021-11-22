@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/ExtendBlock.gd" type="Script" id=1]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_texture.tga" type="Texture" id=2]
@@ -34,6 +34,36 @@ surfaces/0 = {
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0, 0, 0 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "fall"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("box_wooden_3_LOD0:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -2.5, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
 
 [node name="ExtendBlock" type="Spatial" groups=[
 "extend block",
@@ -73,6 +103,9 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="box_wooden_3_LOD0/Area5"]
 shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fall = SubResource( 4 )
 
 [connection signal="body_entered" from="box_wooden_3_LOD0/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="box_wooden_3_LOD0/Area2" to="." method="_on_Area2_body_entered"]
