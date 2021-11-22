@@ -26,7 +26,6 @@ func detect_swipe():
 	elif end_touch.x - start_touch.x > 0:
 		var ans = (end_touch.y - start_touch.y) / (end_touch.x - start_touch.x)
 		var result = rad2deg(atan(ans))
-		print(result)
 		if result >= -45 && result <= 45:
 			swipe = 0
 		elif result < -45:
@@ -36,7 +35,6 @@ func detect_swipe():
 	else:
 		var ans = (end_touch.y - start_touch.y) / (end_touch.x - start_touch.x)
 		var result = rad2deg(atan(ans))
-		print(result)
 		if result >= -45 && result <= 45:
 			swipe = 2
 		elif result < -45:
@@ -47,7 +45,6 @@ func detect_swipe():
 func _input(event):
 	swipe = -1
 	if event is InputEventSingleScreenTouch:
-		print(event.as_text())
 		if event.pressed:
 			start_touch = event.position
 		else:
@@ -72,8 +69,6 @@ func _input(event):
 			can_move = false
 
 func check_win():
-	print(Autoload.target_block_num)
-	print(swipe)
 	move_count += 1
 	$Label.text = "MOVE: " + str(move_count) 
 	if Autoload.target_block_num == Autoload.target_block:
