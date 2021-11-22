@@ -80,19 +80,19 @@ func _ready():
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))
 
-func _on_Button_pressed():
+func restart():
 	Autoload.full_reset()
 	get_tree().change_scene("res://scene/level.tscn")
+
+func _on_Button_pressed():
+	restart()
 
 func _on_Button2_pressed():
 	if Autoload.current_level != 0:
 		Autoload.current_level -= 1
-	Autoload.full_reset()
-	get_tree().change_scene("res://scene/level.tscn")
-
+	restart()
 
 func _on_Button3_pressed():
 	if Autoload.current_level != len(Autoload.files) -1:
 		Autoload.current_level += 1
-	Autoload.full_reset()
-	get_tree().change_scene("res://scene/level.tscn")
+	restart()
