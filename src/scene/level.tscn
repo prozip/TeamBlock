@@ -26,6 +26,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="prev" type="Button" parent="."]
+margin_left = 1141.67
+margin_top = 400.129
+margin_right = 1328.67
+margin_bottom = 497.129
+custom_styles/normal = SubResource( 1 )
+text = "Prev level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 1141.67
+margin_top = 575.036
+margin_right = 1328.67
+margin_bottom = 672.036
+custom_styles/normal = SubResource( 1 )
+text = "Next level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="prev" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 
 [editable path="MainBlock"]

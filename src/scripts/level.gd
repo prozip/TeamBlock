@@ -53,8 +53,7 @@ func addBlock(character, location):
 
 func read_file(filename):
 	var file = File.new()
-	#file.open("..//level//" + filename, File.READ)
-	file.open("..//level//" + filename, File.READ)	
+	file.open(Autoload.path + filename, File.READ)	
 	var line
 	while !file.eof_reached():
 		line = file.get_csv_line()
@@ -75,7 +74,7 @@ func generate_map():
 			addBlock(character, Vector2(i,-j))
 			
 func _ready():
-	read_file(Autoload.current_level)
+	read_file(Autoload.files[Autoload.current_level])
 	generate_map()
 	
 func on_collide(obj, geo):
@@ -85,4 +84,15 @@ func _on_Button_pressed():
 	Autoload.full_reset()
 	get_tree().change_scene("res://scene/level.tscn")
 
+func _on_Button2_pressed():
+	if Autoload.current_level != 0:
+		Autoload.current_level -= 1
+	Autoload.full_reset()
+	get_tree().change_scene("res://scene/level.tscn")
 
+
+func _on_Button3_pressed():
+	if Autoload.current_level != len(Autoload.files) -1:
+		Autoload.current_level += 1
+	Autoload.full_reset()
+	get_tree().change_scene("res://scene/level.tscn")
