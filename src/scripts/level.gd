@@ -18,7 +18,7 @@ func addBlock(character, location):
 		extendBlock.transform.origin = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
 		extendBlock.connect("collide", self, "on_collide")
 		MainBlock.add_child(extendBlock)
-		addBlock("0", location)
+		addBlock("o", location)
 	
 	elif character == "3":
 		var target = Target.instance()
@@ -37,15 +37,15 @@ func addBlock(character, location):
 		block.transform.origin = Vector3(location.x, 1, location.y)
 		block.name = "Block("+str(location.x)+","+str(location.y)+")"
 		add_child(block)
-		addBlock("0", location)
+		addBlock("o", location)
 	
-	elif character == "5":
+	elif character == "x":
 		var wall = Wall.instance()
 		add_child(wall)
 		$wall.transform.origin = Vector3(location.x, 1, location.y)
 		$wall.name = "Block("+str(location.x)+","+str(location.y)+")"
 
-	elif character == "0":
+	elif character == "o":
 		var ground = Ground.instance()
 		add_child(ground)
 		$ground.transform.origin = Vector3(location.x, 0.5, location.y)
