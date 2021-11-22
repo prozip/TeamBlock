@@ -18,7 +18,7 @@ func addBlock(character, location):
 		extendBlock.transform.origin = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
 		extendBlock.connect("collide", self, "on_collide")
 		MainBlock.add_child(extendBlock)
-		addBlock("o", location)
+		addBlock("0", location)
 	
 	elif character == "3":
 		var target = Target.instance()
@@ -37,15 +37,15 @@ func addBlock(character, location):
 		block.transform.origin = Vector3(location.x, 1, location.y)
 		block.name = "Block("+str(location.x)+","+str(location.y)+")"
 		add_child(block)
-		addBlock("o", location)
+		addBlock("0", location)
 	
-	elif character == "x":
+	elif character == "5":
 		var wall = Wall.instance()
 		add_child(wall)
 		$wall.transform.origin = Vector3(location.x, 1, location.y)
 		$wall.name = "Block("+str(location.x)+","+str(location.y)+")"
 
-	elif character == "o":
+	elif character == "0":
 		var ground = Ground.instance()
 		add_child(ground)
 		$ground.transform.origin = Vector3(location.x, 0.5, location.y)
@@ -53,8 +53,9 @@ func addBlock(character, location):
 
 func read_file(filename):
 	var file = File.new()
-	file.open("..//level//" + filename, File.READ)
-	var line 
+	#file.open("..//level//" + filename, File.READ)
+	file.open("..//level//" + filename, File.READ)	
+	var line = file.get_csv_line()
 	while !file.eof_reached():
 		line = file.get_csv_line()
 		if line.size() > 1:
@@ -80,7 +81,8 @@ func _ready():
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))
 
-
 func _on_Button_pressed():
 	Autoload.full_reset()
 	get_tree().change_scene("res://scene/level.tscn")
+
+
