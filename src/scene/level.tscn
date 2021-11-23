@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
 [ext_resource path="res://scripts/MainBlock.gd" type="Script" id=3]
+[ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -16,10 +17,10 @@ script = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1136.62
-margin_top = 201.678
-margin_right = 1323.62
-margin_bottom = 298.678
+margin_left = 1083.7
+margin_top = 206.718
+margin_right = 1270.7
+margin_bottom = 303.718
 custom_styles/normal = SubResource( 1 )
 text = "Restart"
 __meta__ = {
@@ -27,10 +28,10 @@ __meta__ = {
 }
 
 [node name="prev" type="Button" parent="."]
-margin_left = 1141.67
-margin_top = 400.129
-margin_right = 1328.67
-margin_bottom = 497.129
+margin_left = 1083.71
+margin_top = 392.569
+margin_right = 1270.71
+margin_bottom = 489.569
 custom_styles/normal = SubResource( 1 )
 text = "Prev level"
 __meta__ = {
@@ -38,15 +39,17 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 1141.67
+margin_left = 1091.27
 margin_top = 575.036
-margin_right = 1328.67
+margin_right = 1278.27
 margin_bottom = 672.036
 custom_styles/normal = SubResource( 1 )
 text = "Next level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MenuContainer" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="prev" to="." method="_on_Button2_pressed"]
