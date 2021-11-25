@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TeamBlock"
-run/main_scene="res://scene/level.tscn"
+run/main_scene="res://scene/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

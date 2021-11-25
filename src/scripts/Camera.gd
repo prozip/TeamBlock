@@ -2,8 +2,8 @@ extends Camera
 
 var position = Vector2()
 var drag_speed = 0.02
-var drag_percent = 0.7
 var zoom_speed = 0.5
+var move_percent = 0.7
 
 export(int,"disabled","single_drag","multi_drag") var movement_gesture = 2
 export(int,"disabled","pinch") var zoom_gesture = 1
@@ -15,9 +15,8 @@ onready var current_target_trans = Vector3(0,0.5,0)
 onready var default_fov = fov
 
 func _physics_process(delta: float) -> void:
-	print(fov, self.translation)
 	if(target != null):
-		current_target_trans = target.translation - current_target_trans
+		current_target_trans = (target.translation - current_target_trans) * move_percent
 		self.translation = lerp(self.translation, current_target_trans + offset, smooth_speed * delta)
 
 func set_position(p):

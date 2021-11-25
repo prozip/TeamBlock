@@ -11,62 +11,62 @@
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 0.509804 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.211765, 0.32549, 0.776471, 1 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
-corner_radius_top_left = 75
-corner_radius_top_right = 75
-corner_radius_bottom_right = 75
-corner_radius_bottom_left = 75
-
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.803922, 0.290196, 0.290196, 1 )
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.105882, 0.666667, 0.894118, 0 )
+bg_color = Color( 0.803922, 0.290196, 0.290196, 1 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
+bg_color = Color( 0.105882, 0.666667, 0.894118, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.498039, 0.184314, 0.882353, 1 )
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
 [sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.498039, 0.184314, 0.882353, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [node name="MainMenu" type="Panel"]
@@ -98,7 +98,7 @@ margin_top = 300.0
 margin_right = 620.0
 margin_bottom = 735.0
 rect_min_size = Vector2( 520, 435 )
-custom_styles/panel = SubResource( 12 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -112,9 +112,9 @@ rect_min_size = Vector2( 450, 141 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.7
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 11 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -137,9 +137,9 @@ margin_bottom = 287.0
 rect_min_size = Vector2( 450, 141 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Continues"]
 margin_left = 30.636
@@ -159,9 +159,9 @@ margin_bottom = 428.0
 rect_min_size = Vector2( 450, 141 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 8 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
