@@ -1,7 +1,8 @@
 extends Camera
 
 var position = Vector2()
-var drag_speed = 0.05
+var drag_speed = 0.02
+var zoom_speed = 0.5
 
 export(int,"disabled","single_drag","multi_drag") var movement_gesture = 2
 export(int,"disabled","pinch") var zoom_gesture = 1
@@ -20,7 +21,7 @@ func _unhandled_input(event):
 
 func zoom(event):
 	var li = event.distance
-	var lf = event.distance + event.relative
+	var lf = event.distance + event.relative * zoom_speed
 	var zi = fov
 	var zf = (li*zi)/lf
 	if zf == 0: return
