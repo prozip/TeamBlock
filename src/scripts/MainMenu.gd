@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Panel
 
 
 func _on_NewGame_pressed():
