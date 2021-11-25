@@ -12,10 +12,6 @@ func _ready():
 
 	grid = get_node(grid)
 	for i in range(0,total_level):
-		if total_level % 4 == 0:
-			self.columns = int(total_level/4)
-		else: 
-			self.columns = int(total_level/4 + total_level % 4)
 		generate_button(i + 1)
 	
 
