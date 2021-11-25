@@ -15,6 +15,7 @@ script = ExtResource( 3 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
+light_color = Color( 0.701961, 0.85098, 0.901961, 1 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 1083.7

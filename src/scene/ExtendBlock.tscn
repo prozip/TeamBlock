@@ -8,31 +8,31 @@
 [sub_resource type="Animation" id=1]
 resource_name = "fall"
 length = 0.7
-tracks/0/type = "value"
-tracks/0/path = NodePath("mesh/box_wooden_3_LOD0:translation")
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -2.5, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0.7 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "queue_free"
 } ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -2.5, 0 ) ]
 }
 
 [sub_resource type="SpatialMaterial" id=2]
@@ -105,8 +105,21 @@ material/0 = null
 [node name="block_stone1_6_LOD1" type="MeshInstance" parent="mesh"]
 transform = Transform( 0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 0, 0, 0 )
 visible = false
+layers = 2
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
+
+[node name="OmniLight" type="OmniLight" parent="mesh/block_stone1_6_LOD1"]
+transform = Transform( 1.08696, 0, 0, 0, 1.08696, 0, 0, 0, 1.08696, 0.537647, 0.0655206, 0.0161055 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 30.0
+omni_range = 0.507162
+
+[node name="OmniLight2" type="OmniLight" parent="mesh/block_stone1_6_LOD1"]
+transform = Transform( 1.08696, 0, 0, 0, 1.08696, 0, 0, 0, 1.08696, 0.0139193, 0.491993, 0.0161055 )
+light_color = Color( 0.337255, 0, 0, 1 )
+light_energy = 30.0
+omni_range = 0.507162
 
 [node name="area_collections" type="Spatial" parent="."]
 

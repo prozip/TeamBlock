@@ -1,6 +1,7 @@
 extends KinematicBody
 
 var is_collide = false
+var type = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

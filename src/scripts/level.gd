@@ -24,8 +24,9 @@ func addBlock(character, location):
 	
 	elif character == "3":
 		var target = Target.instance()
-		target.transform.origin = Vector3(location.x, 0.5001, location.y)
+		target.transform.origin = Vector3(location.x, 0.51, location.y)
 		target.name = "Block("+str(location.x)+","+str(location.y)+")"
+		target.get_child(1).get_child(0).visible = true
 		add_child(target)
 		Autoload.target_block += 1
 		Autoload.target_map.append(target)
@@ -33,6 +34,14 @@ func addBlock(character, location):
 		target_ground.transform.origin = Vector3(location.x, 0.5, location.y)
 		target_ground.name = "Target("+str(location.x)+","+str(location.y)+")"
 		add_child(target_ground)
+	
+	elif character =="4":
+		var target = Target.instance()
+		target.transform.origin = Vector3(location.x, 0.55, location.y)
+		target.name = "Block("+str(location.x)+","+str(location.y)+")"
+		target.get_child(1).get_child(1).visible = true
+		add_child(target)
+		addBlock("o", location)
 	
 	elif character == "2":
 		var block = Block.instance()
@@ -60,9 +69,9 @@ func addBlock(character, location):
 
 	elif character == "o":
 		var ground = Ground.instance()
+		ground.transform.origin = Vector3(location.x, 0.5, location.y)
+		ground.name = "Block("+str(location.x)+","+str(location.y)+")"
 		add_child(ground)
-		$ground.transform.origin = Vector3(location.x, 0.5, location.y)
-		$ground.name = "Block("+str(location.x)+","+str(location.y)+")"
 
 func read_file(filename):
 	var file = File.new()
