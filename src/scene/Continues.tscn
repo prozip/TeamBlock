@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/level choosing/level choosing.png" type="Texture" id=1]
 [ext_resource path="res://assets/level choosing/return.png" type="Texture" id=2]
@@ -27,6 +27,32 @@ corner_radius_bottom_left = 25
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="Theme" id=6]
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = SubResource( 7 )
+HScrollBar/styles/scroll_focus = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 8 )
+VScrollBar/styles/scroll_focus = null
+
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -36,8 +62,9 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 1366.0
+margin_bottom = 768.0
+rect_min_size = Vector2( 1366, 768 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,21 +106,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+[node name="Scroll Container" type="ScrollContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 35.0
 margin_top = 200.0
-margin_right = 1366.0
-margin_bottom = 750.0
+margin_right = -11.0
+margin_bottom = -18.0
+rect_min_size = Vector2( 1320, 550 )
+theme = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer"]
-margin_right = 1366.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Scroll Container"]
+margin_right = 1320.0
 margin_bottom = 550.0
-rect_min_size = Vector2( 1366, 550 )
-custom_constants/vseparation = 320
-custom_constants/hseparation = 320
-columns = 4
+rect_min_size = Vector2( 1320, 550 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Panel/Scroll Container/HBoxContainer"]
+margin_right = 1320.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 1320, 550 )
+custom_constants/vseparation = 41
+custom_constants/hseparation = 41
+columns = 6
 script = ExtResource( 4 )
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]
