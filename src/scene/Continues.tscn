@@ -27,13 +27,13 @@ corner_radius_bottom_left = 25
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=7]
 HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_highlight = null
 HScrollBar/icons/increment = null
@@ -41,7 +41,7 @@ HScrollBar/icons/increment_highlight = null
 HScrollBar/styles/grabber = null
 HScrollBar/styles/grabber_highlight = null
 HScrollBar/styles/grabber_pressed = null
-HScrollBar/styles/scroll = SubResource( 7 )
+HScrollBar/styles/scroll = SubResource( 5 )
 HScrollBar/styles/scroll_focus = null
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
@@ -50,7 +50,7 @@ VScrollBar/icons/increment_highlight = null
 VScrollBar/styles/grabber = null
 VScrollBar/styles/grabber_highlight = null
 VScrollBar/styles/grabber_pressed = null
-VScrollBar/styles/scroll = SubResource( 8 )
+VScrollBar/styles/scroll = SubResource( 6 )
 VScrollBar/styles/scroll_focus = null
 
 [node name="Control" type="Control"]
@@ -114,7 +114,7 @@ margin_top = 200.0
 margin_right = -11.0
 margin_bottom = -18.0
 rect_min_size = Vector2( 1320, 550 )
-theme = SubResource( 6 )
+theme = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -135,5 +135,8 @@ custom_constants/vseparation = 41
 custom_constants/hseparation = 41
 columns = 6
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]

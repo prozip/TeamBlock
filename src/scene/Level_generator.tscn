@@ -30,6 +30,7 @@ font_data = ExtResource( 3 )
 margin_right = 180.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 1
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
