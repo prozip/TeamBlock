@@ -1,49 +1,49 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/main_menu/title.png" type="Texture" id=1]
-[ext_resource path="res://assets/main_menu/Continues.png" type="Texture" id=2]
-[ext_resource path="res://assets/main_menu/New Game.png" type="Texture" id=3]
+[ext_resource path="res://assets/main_menu/label_new_game.png" type="Texture" id=2]
+[ext_resource path="res://assets/main_menu/label_continue.png" type="Texture" id=3]
+[ext_resource path="res://assets/main_menu/bg_Window1.png" type="Texture" id=4]
 [ext_resource path="res://assets/main_menu/quit.png" type="Texture" id=5]
 [ext_resource path="res://assets/main_menu/background.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/main_menu/Btn_button04_h.png" type="Texture" id=7]
+[ext_resource path="res://assets/main_menu/Btn_sci-fi button03_n.png" type="Texture" id=8]
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=9]
+[ext_resource path="res://assets/main_menu/Btn_sci-fi button03_h.png" type="Texture" id=10]
+[ext_resource path="res://assets/main_menu/ICON_Help.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0, 0, 0.509804 )
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1143, 728 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.211765, 0.32549, 0.776471, 1 )
-corner_radius_top_left = 75
-corner_radius_top_right = 75
-corner_radius_bottom_right = 75
-corner_radius_bottom_left = 75
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 290, 100 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.803922, 0.290196, 0.290196, 1 )
-corner_radius_top_left = 75
-corner_radius_top_right = 75
-corner_radius_bottom_right = 75
-corner_radius_bottom_left = 75
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 290, 100 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.105882, 0.666667, 0.894118, 0 )
@@ -53,25 +53,42 @@ corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.423529, 0.423529, 0.423529, 0.792157 )
+bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.498039, 0.184314, 0.882353, 1 )
-corner_radius_top_left = 75
-corner_radius_top_right = 75
-corner_radius_bottom_right = 75
-corner_radius_bottom_left = 75
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 290, 100 )
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 162, 162 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 162, 162 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 162, 162 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
 [node name="MainMenu" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 3.56348
+margin_top = 12.4726
+margin_right = 3.56348
+margin_bottom = 12.4726
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -79,8 +96,8 @@ __meta__ = {
 }
 
 [node name="Titles" type="TextureRect" parent="."]
-margin_left = 210.0
-margin_right = 1150.0
+margin_left = 214.0
+margin_right = 1154.0
 margin_bottom = 318.0
 rect_min_size = Vector2( 550, 160 )
 rect_clip_content = true
@@ -93,85 +110,109 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 100.0
-margin_top = 300.0
-margin_right = 620.0
-margin_bottom = 735.0
+margin_left = 326.989
+margin_top = 309.439
+margin_right = 1026.99
+margin_bottom = 744.439
 rect_min_size = Vector2( 520, 435 )
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="NewGame" type="Button" parent="Panel"]
-margin_left = 27.0
-margin_top = 5.0
-margin_right = 477.0
-margin_bottom = 146.0
-rect_min_size = Vector2( 450, 141 )
+margin_left = 175.0
+margin_top = 10.0
+margin_right = 525.0
+margin_bottom = 151.0
+rect_min_size = Vector2( 350, 141 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.7
 custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel/NewGame"]
-margin_left = 27.2183
-margin_top = 12.7818
-margin_right = 443.218
-margin_bottom = 122.782
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Continues" type="Button" parent="Panel"]
-margin_left = 27.0
-margin_top = 146.0
-margin_right = 477.0
-margin_bottom = 287.0
-rect_min_size = Vector2( 450, 141 )
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-
-[node name="TextureRect" type="TextureRect" parent="Panel/Continues"]
-margin_left = 30.636
-margin_top = 16.036
-margin_right = 414.636
-margin_bottom = 124.036
+margin_left = 30.0
+margin_right = 324.0
+margin_bottom = 141.0
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Continues" type="Button" parent="Panel"]
+margin_left = 175.0
+margin_top = 151.0
+margin_right = 525.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 350, 141 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Continues"]
+margin_left = 32.0
+margin_right = 318.0
+margin_bottom = 141.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Quit Game" type="Button" parent="Panel"]
-margin_left = 27.0
-margin_top = 287.0
-margin_right = 477.0
-margin_bottom = 428.0
-rect_min_size = Vector2( 450, 141 )
+margin_left = 230.0
+margin_top = 292.0
+margin_right = 468.0
+margin_bottom = 433.0
+rect_min_size = Vector2( 238, 141 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 10 )
+custom_styles/pressed = SubResource( 17 )
 custom_styles/normal = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Quit Game"]
-margin_left = 30.636
-margin_top = 16.036
-margin_right = 205.636
-margin_bottom = 124.036
+margin_top = 5.0
+margin_right = 238.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 238, 141 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1241.91
+margin_top = 659.265
+margin_right = 1341.91
+margin_bottom = 759.265
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Button"]
+margin_left = 10.6907
+margin_top = 12.4726
+margin_right = 90.6907
+margin_bottom = 92.4726
+mouse_filter = 2
+custom_styles/panel = SubResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
