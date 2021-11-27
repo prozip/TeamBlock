@@ -71,7 +71,7 @@ func _input(event):
 func check_win():
 	print(Autoload.target_lava_num)
 	move_count += 1
-	$Label.text = "MOVE: " + str(move_count) 
+	$Panel/Label.text = str(move_count) 
 	if (Autoload.target_block_num == Autoload.target_block
 		&& Autoload.target_lava_num == Autoload.target_lava):
 		print('win')

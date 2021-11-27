@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
@@ -7,8 +7,35 @@
 [ext_resource path="res://scripts/Camera.gd" type="Script" id=5]
 [ext_resource path="res://UI/Next_Level.png" type="Texture" id=6]
 [ext_resource path="res://UI/Prev_Level.png" type="Texture" id=7]
-[ext_resource path="res://UI/Restart.png" type="Texture" id=8]
+[ext_resource path="res://UI/Pause.png" type="Texture" id=8]
 [ext_resource path="res://UI/Background3d.png" type="Texture" id=9]
+[ext_resource path="res://UI/Icon_Again.png" type="Texture" id=10]
+[ext_resource path="res://UI/Circle3_White3.png" type="Texture" id=11]
+[ext_resource path="res://UI/Circle3_White2.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -34,29 +61,55 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5
 light_color = Color( 0.701961, 0.85098, 0.901961, 1 )
 
 [node name="Restart" type="Button" parent="."]
-margin_left = 7.35081
-margin_top = 2.19434
-margin_right = 135.351
-margin_bottom = 130.194
-rect_min_size = Vector2( 128, 128 )
-custom_styles/normal = SubResource( 1 )
+margin_left = 160.0
+margin_right = 320.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 160, 146 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Restart"]
-margin_right = 128.0
-margin_bottom = 128.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 144.0
+margin_bottom = 136.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="."]
+margin_right = 160.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 160, 146 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Pause"]
+margin_left = 33.0
+margin_top = 25.0
+margin_right = 129.0
+margin_bottom = 121.0
 texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MenuContainer" parent="." instance=ExtResource( 4 )]
+
 [node name="Prev" type="Button" parent="."]
-margin_left = 182.911
-margin_top = 3.62347
-margin_right = 310.911
-margin_bottom = 131.623
+margin_left = 581.046
+margin_top = 16.2227
+margin_right = 709.046
+margin_bottom = 144.223
 rect_min_size = Vector2( 128, 128 )
 custom_styles/normal = SubResource( 1 )
 __meta__ = {
@@ -64,18 +117,20 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Prev"]
-margin_right = 96.0
-margin_bottom = 96.0
+margin_left = 5.03979
+margin_top = 22.6786
+margin_right = 101.04
+margin_bottom = 118.679
 texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Next" type="Button" parent="."]
-margin_left = 303.727
-margin_top = 3.16479
-margin_right = 431.727
-margin_bottom = 131.165
+margin_left = 724.541
+margin_top = 18.2839
+margin_right = 852.541
+margin_bottom = 146.284
 rect_min_size = Vector2( 128, 128 )
 custom_styles/normal = SubResource( 1 )
 __meta__ = {
@@ -83,16 +138,14 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Next"]
-margin_left = 11.3265
-margin_top = 1.88773
-margin_right = 107.327
-margin_bottom = 97.8877
+margin_left = 11.0
+margin_top = 27.0
+margin_right = 107.0
+margin_bottom = 123.0
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MenuContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -4.35449e-08, -0.82096, 0.570986, -3.81198e-09, 0.570986, 0.82096, -1, 3.3572e-08, -2.7993e-08, 20.1343, 26.8134, -14.1138 )
@@ -110,8 +163,8 @@ environment = SubResource( 2 )
 layer = -1
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1366.0
+margin_bottom = 768.0
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
