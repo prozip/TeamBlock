@@ -172,12 +172,11 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Panel"]
 margin_left = 771.129
-margin_top = 247.354
+margin_top = 244.332
 margin_right = 871.129
-margin_bottom = 347.354
+margin_bottom = 344.332
 custom_fonts/font = SubResource( 13 )
 text = ": 154"
-align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false

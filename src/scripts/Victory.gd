@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	pass # Replace with function body.
+	$Panel/Label.text = " :  "+ str(Autoload.move_count)
 	
 func restart():
 	Autoload.full_reset()
