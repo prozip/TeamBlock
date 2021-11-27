@@ -26,6 +26,7 @@ func set_position(p):
 	transform.origin.z = -p.x
 	
 func _unhandled_input(event):
+	print(event)
 	if (event is InputEventMultiScreenDrag and  movement_gesture == 2):
 		position.y = transform.origin.x
 		position.x = -transform.origin.z
