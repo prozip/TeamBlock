@@ -113,6 +113,7 @@ layer = -1
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 1366, 768 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
