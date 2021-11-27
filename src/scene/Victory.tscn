@@ -1,0 +1,182 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/Congrat/Panel.png" type="Texture" id=1]
+[ext_resource path="res://assets/Congrat/Icon_Home.png" type="Texture" id=2]
+[ext_resource path="res://assets/Congrat/Circle2_White2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Congrat/Title.png" type="Texture" id=4]
+[ext_resource path="res://assets/Congrat/You win.png" type="Texture" id=5]
+[ext_resource path="res://assets/Congrat/Circle10_White2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Congrat/Icon_Again.png" type="Texture" id=7]
+[ext_resource path="res://assets/Congrat/Icon_Next5.png" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/A001ff-Bold.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/Congrat/Total_Move.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 516, 81 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 180, 180 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 180, 180 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 180, 180 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 489, 224 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 56
+font_data = ExtResource( 9 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 464.386
+margin_top = 88.7241
+margin_right = 884.386
+margin_bottom = 203.724
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Panel"]
+margin_left = 111.377
+margin_top = 396.427
+margin_right = 1311.38
+margin_bottom = 696.427
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="Button" parent="Panel"]
+margin_left = 820.0
+margin_top = 445.0
+margin_right = 1020.0
+margin_bottom = 645.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Next"]
+margin_left = 41.5305
+margin_top = 35.8673
+margin_right = 169.531
+margin_bottom = 163.867
+texture = ExtResource( 8 )
+
+[node name="Replay" type="Button" parent="Panel"]
+margin_left = 570.0
+margin_top = 445.0
+margin_right = 770.0
+margin_bottom = 645.0
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Replay"]
+margin_left = 35.8672
+margin_top = 37.7549
+margin_right = 163.867
+margin_bottom = 165.755
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="Button" parent="Panel"]
+margin_left = 320.0
+margin_top = 445.0
+margin_right = 520.0
+margin_bottom = 645.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Home"]
+margin_left = 37.7549
+margin_top = 33.9794
+margin_right = 165.755
+margin_bottom = 161.979
+texture = ExtResource( 2 )
+
+[node name="Panel2" type="Panel" parent="Panel"]
+margin_left = 432.237
+margin_top = 222.754
+margin_right = 832.237
+margin_bottom = 372.754
+custom_styles/panel = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 771.129
+margin_top = 247.354
+margin_right = 871.129
+margin_bottom = 347.354
+custom_fonts/font = SubResource( 13 )
+text = ": 154"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
