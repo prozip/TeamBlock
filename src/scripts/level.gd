@@ -24,7 +24,7 @@ func addBlock(character, location):
 	
 	elif character == "3":
 		var target = Target.instance()
-		target.transform.origin = Vector3(location.x, 0.51, location.y)
+		target.transform.origin = Vector3(location.x, 0.55, location.y)
 		target.name = "Block("+str(location.x)+","+str(location.y)+")"
 		target.get_child(1).get_child(0).visible = true
 		add_child(target)
@@ -41,6 +41,8 @@ func addBlock(character, location):
 		target.name = "Block("+str(location.x)+","+str(location.y)+")"
 		target.get_child(1).get_child(1).visible = true
 		add_child(target)
+		Autoload.target_lava += 1
+		Autoload.target_map.append(target)
 		addBlock("o", location)
 	
 	elif character == "2":
@@ -57,7 +59,7 @@ func addBlock(character, location):
 	
 	elif character == "l":
 		var lava = Lava.instance()
-		lava.transform.origin = Vector3(location.x, 1, location.y)
+		lava.transform.origin = Vector3(location.x, 0.92, location.y)
 		add_child(lava)
 		
 	

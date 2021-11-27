@@ -69,12 +69,13 @@ func _input(event):
 			can_move = false
 
 func check_win():
+	print(Autoload.target_lava_num)
 	move_count += 1
 	$Label.text = "MOVE: " + str(move_count) 
-	if Autoload.target_block_num == Autoload.target_block:
+	if (Autoload.target_block_num == Autoload.target_block
+		&& Autoload.target_lava_num == Autoload.target_lava):
 		print('win')
 	else:
-		Autoload.target_block_num = 0
 		Autoload.reset_target()
 
 func _physics_process(delta):
