@@ -74,7 +74,7 @@ func check_win():
 	$Panel/Label.text = str(move_count) 
 	if (Autoload.target_block_num == Autoload.target_block
 		&& Autoload.target_lava_num == Autoload.target_lava):
-		print('win')
+		get_tree().change_scene("res://scene/Victory.tscn")
 	else:
 		Autoload.reset_target()
 

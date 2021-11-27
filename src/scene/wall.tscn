@@ -31,7 +31,7 @@ surfaces/0 = {
 "vertex_count": 43
 }
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=4]
 resource_name = "block_ruby_LOD0"
 surfaces/0 = {
 "aabb": AABB( -0.591095, -0.570393, -0.612876, 1.16249, 1.15429, 1.21757 ),
@@ -58,8 +58,7 @@ shape = SubResource( 1 )
 [node name="mesh" type="Spatial" parent="."]
 
 [node name="Cube_Red_Brick" type="MeshInstance" parent="mesh"]
-transform = Transform( -0.95, 1.16345e-16, -2.55112e-05, 1.16341e-16, 0.95, 1.16345e-16, 2.55112e-05, 1.16341e-16, -0.95, 0, 0, 0 )
-visible = false
+transform = Transform( -0.96, 1.17569e-16, -2.57797e-05, 1.17566e-16, 0.96, 1.17569e-16, 2.57797e-05, 1.17566e-16, -0.96, 0, 0, 0 )
 layers = 3
 mesh = SubResource( 3 )
 material/0 = null
@@ -87,5 +86,5 @@ light_energy = 0.15
 [node name="block_ruby_LOD0" type="MeshInstance" parent="mesh"]
 transform = Transform( -4.02145e-08, 0.92, 0, -0.92, -4.02145e-08, 0, 0, 0, 0.92, 0, -0.05, 0 )
 visible = false
-mesh = SubResource( 5 )
+mesh = SubResource( 4 )
 material/0 = null
