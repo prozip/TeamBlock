@@ -7,6 +7,8 @@ onready var files = []
 var move = [true, true, true, true]
 var target_block = 0
 var target_block_num = 0
+var target_lava = 0
+var target_lava_num = 0
 var target_map = []
 
 class custom_sorter:
@@ -41,6 +43,8 @@ func full_reset():
 	move = [true, true, true, true]
 	target_block = 0
 	target_block_num = 0
+	target_lava = 0
+	target_lava_num = 0
 	target_map = []
 	
 func reset_move():
@@ -48,5 +52,7 @@ func reset_move():
 		move[i] = true
 	
 func reset_target():
+	target_block_num = 0
+	target_lava_num = 0
 	for i in len(target_map):
 		target_map[i].is_collide = false
