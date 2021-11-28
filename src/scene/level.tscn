@@ -54,7 +54,6 @@ background_color = Color( 0.407843, 0.176471, 0.152941, 1 )
 background_energy = 0.0
 background_canvas_max_layer = -1
 ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
-ambient_light_energy = 0.05
 
 [sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 9 )

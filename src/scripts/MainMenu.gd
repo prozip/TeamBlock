@@ -8,6 +8,7 @@ func _on_NewGame_pressed():
 
 
 func _on_Continues_pressed():
+	Autoload.full_reset()
 	get_tree().change_scene("res://scene/Continues.tscn")
 
 
