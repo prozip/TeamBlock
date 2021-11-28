@@ -28,6 +28,7 @@ func load_level(path: String):
 
 func load_mainmenu():
 	get_tree().change_scene("res://scene/MainMenu.tscn")
+	emit_signal("exit_menu")
 
 func resume_game():
 	emit_signal("resume_game")

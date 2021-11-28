@@ -13,4 +13,5 @@ func on_collide(lava_check):
 			if $mesh/block2.visible:
 				Autoload.target_lava_num += 1
 		else:
-			Autoload.target_block_num += 1
+			if $mesh/block.visible:
+				Autoload.target_block_num += 1

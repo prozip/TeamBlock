@@ -2,6 +2,8 @@ extends Panel
 
 
 func _on_NewGame_pressed():
+	Autoload.full_reset()
+	Autoload.current_level = 0
 	get_tree().change_scene("res://scene/level.tscn")
 
 

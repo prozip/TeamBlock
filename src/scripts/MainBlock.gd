@@ -69,11 +69,14 @@ func _input(event):
 			can_move = false
 
 func check_win():
-	print(Autoload.target_lava_num)
+	var total_block = get_child_count() - 2
+	var total_target = Autoload.target_block_num + Autoload.target_lava_num
+	var total_target_block = Autoload.target_block +Autoload.target_lava
 	move_count += 1
+	Autoload.move_count = move_count
 	$Panel/Label.text = str(move_count) 
-	if (Autoload.target_block_num == Autoload.target_block
-		&& Autoload.target_lava_num == Autoload.target_lava):
+	if (total_block == total_target && total_block == total_target_block
+	&& Autoload.target_lava_num == Autoload.target_lava):
 		get_tree().change_scene("res://scene/Victory.tscn")
 	else:
 		Autoload.reset_target()

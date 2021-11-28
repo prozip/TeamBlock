@@ -10,6 +10,7 @@ var target_block_num = 0
 var target_lava = 0
 var target_lava_num = 0
 var target_map = []
+var move_count
 
 class custom_sorter:
 	static func sort_ascending(a, b):
