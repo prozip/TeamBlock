@@ -12,6 +12,8 @@ var swipe
 
 var point
 
+onready var Scene_Transition = preload("res://scene//SceneTransition.tscn")
+
 func _ready():
 	print("main block run")
 	point = transform.origin
@@ -69,7 +71,7 @@ func _input(event):
 			can_move = false
 
 func check_win():
-	var total_block = get_child_count() - 2
+	var total_block = get_child_count() - 3
 	var total_target = Autoload.target_block_num + Autoload.target_lava_num
 	var total_target_block = Autoload.target_block +Autoload.target_lava
 	move_count += 1
@@ -78,7 +80,8 @@ func check_win():
 	if (total_block == total_target && total_block == total_target_block
 	&& Autoload.target_lava_num == Autoload.target_lava):
 		print("load")
-		get_tree().change_scene("res://scene/Victory.tscn")
+		$SceneTransition.transition_to("res://scene/Victory.tscn")
+
 	else:
 		Autoload.reset_target()
 
