@@ -12,7 +12,6 @@
 [ext_resource path="res://UI/Icon_Again.png" type="Texture" id=10]
 [ext_resource path="res://UI/Circle3_White3.png" type="Texture" id=11]
 [ext_resource path="res://UI/Circle3_White2.png" type="Texture" id=12]
-[ext_resource path="res://default_env.tres" type="Environment" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 12 )
@@ -48,6 +47,10 @@ region_rect = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="Environment" id=11]
+background_mode = 4
+background_canvas_max_layer = -1
 
 [sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 9 )
@@ -162,7 +165,7 @@ smooth_speed = 2.0
 offset = Vector3( 19.78, 26.24, -10.7 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 13 )
+environment = SubResource( 11 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
