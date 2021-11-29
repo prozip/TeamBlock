@@ -1,7 +1,15 @@
 [gd_resource type="Environment" load_steps=2 format=2]
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="PanoramaSky" id=1]
 
 [resource]
-background_mode = 2
+background_mode = 4
 background_sky = SubResource( 1 )
+background_canvas_max_layer = -1
+ambient_light_color = Color( 0.827451, 1, 0.976471, 1 )
+ambient_light_energy = 0.15
+tonemap_mode = 2
+ssao_enabled = true
+ssao_light_affect = 0.78
+ssao_quality = 2
+dof_blur_far_distance = 3.22
