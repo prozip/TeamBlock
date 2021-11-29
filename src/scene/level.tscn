@@ -48,11 +48,14 @@ region_rect = Rect2( 0, 0, 96, 96 )
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="Environment" id=11]
+[sub_resource type="Environment" id=10]
 background_mode = 4
+background_color = Color( 0.407843, 0.176471, 0.152941, 1 )
+background_energy = 0.0
 background_canvas_max_layer = -1
+ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
@@ -165,7 +168,7 @@ smooth_speed = 2.0
 offset = Vector3( 19.78, 26.24, -10.7 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 11 )
+environment = SubResource( 10 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -175,7 +178,7 @@ margin_right = 1366.0
 margin_bottom = 768.0
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 10 )
+custom_styles/panel = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -79,7 +79,7 @@ surfaces/0 = {
 [sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="ArrayMesh" id=9]
+[sub_resource type="ArrayMesh" id=6]
 resource_name = "presi_large_color3_LOD0"
 surfaces/0 = {
 "aabb": AABB( -0.569566, -0.541606, -0.568491, 1.13913, 1.08408, 1.13913 ),
@@ -94,7 +94,7 @@ surfaces/0 = {
 "vertex_count": 856
 }
 
-[sub_resource type="ArrayMesh" id=10]
+[sub_resource type="ArrayMesh" id=7]
 resource_name = "ribbon_large_color4_LOD0"
 surfaces/0 = {
 "aabb": AABB( -0.479252, -0.115898, -0.493292, 0.965389, 0.467311, 0.987308 ),
@@ -109,10 +109,10 @@ surfaces/0 = {
 "vertex_count": 565
 }
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 0, 0, 0 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=9]
 albedo_color = Color( 0.627451, 0.372549, 0.207843, 1 )
 albedo_texture = ExtResource( 2 )
 
@@ -171,12 +171,13 @@ omni_range = 0.507162
 
 [node name="presi_large_color3_LOD0" type="MeshInstance" parent="mesh"]
 transform = Transform( 0.96, 0, 0, 0, 0.96, 0, 0, 0, 0.96, 0, 0, 0 )
-mesh = SubResource( 9 )
+visible = false
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="ribbon_large_color4_LOD0" type="MeshInstance" parent="mesh/presi_large_color3_LOD0"]
 transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0.549332, 0 )
-mesh = SubResource( 10 )
+mesh = SubResource( 7 )
 material/0 = null
 
 [node name="area_collections" type="Spatial" parent="."]
@@ -185,36 +186,36 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="area_collections/Area"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Area2" type="Area" parent="area_collections"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="area_collections/Area2"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Area3" type="Area" parent="area_collections"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="area_collections/Area3"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Area4" type="Area" parent="area_collections"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="area_collections/Area4"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Area5" type="Area" parent="area_collections"]
 
 [node name="CollisionShape" type="CollisionShape" parent="area_collections/Area5"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="lava_block" type="MeshInstance" parent="."]
 transform = Transform( 0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 0, 0, 0 )
 visible = false
 mesh = SubResource( 4 )
-material/0 = SubResource( 8 )
+material/0 = SubResource( 9 )
 
 [node name="OmniLight" type="OmniLight" parent="lava_block"]
 transform = Transform( 1.08696, 0, 0, 0, 1.08696, 0, 0, 0, 1.08696, 0.537647, 0.0655206, 0.0161055 )
