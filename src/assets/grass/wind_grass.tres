@@ -10,7 +10,7 @@ width = 128
 curve = SubResource( 1 )
 
 [sub_resource type="Gradient" id=3]
-offsets = PoolRealArray( 0, 0.486339, 0.966102 )
+offsets = PoolRealArray( 0, 0.521978, 0.958791 )
 colors = PoolColorArray( 0.054902, 0.556863, 0.439216, 1, 0.321569, 0.890196, 0.341176, 1, 0.4991, 0.92, 0.3588, 1 )
 
 [sub_resource type="GradientTexture" id=4]
