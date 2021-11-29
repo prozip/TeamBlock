@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/kenney_sokobanpack/PNG/Retina/Crates/crate_21.png" type="Texture" id=1]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_texture.tga" type="Texture" id=2]
@@ -88,6 +88,19 @@ surfaces/0 = {
 "vertex_count": 395
 }
 
+[sub_resource type="SpatialMaterial" id=9]
+resource_name = "cubeworld_mat"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( 2 )
+metallic = 0.71
+roughness = 0.54
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
+
 [node name="Block" type="KinematicBody" groups=[
 "block",
 ]]
@@ -115,6 +128,5 @@ mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="gold_block_LOD0" type="MeshInstance" parent="mesh"]
-visible = false
 mesh = SubResource( 8 )
-material/0 = null
+material/0 = SubResource( 9 )
