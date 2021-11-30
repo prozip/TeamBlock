@@ -128,5 +128,6 @@ mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="gold_block_LOD0" type="MeshInstance" parent="mesh"]
+visible = false
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
