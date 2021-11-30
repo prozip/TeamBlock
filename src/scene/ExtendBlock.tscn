@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scripts/ExtendBlock.gd" type="Script" id=1]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_texture.tga" type="Texture" id=2]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_glow.tga" type="Texture" id=3]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_mat.material" type="Material" id=4]
+[ext_resource path="res://assets/Dissolve3D/DissolvingSphere.gd" type="Script" id=5]
+[ext_resource path="res://assets/Shader/dissolve.shader" type="Shader" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fall"
@@ -78,6 +80,29 @@ surfaces/0 = {
 
 [sub_resource type="SpatialMaterial" id=5]
 albedo_texture = ExtResource( 2 )
+
+[sub_resource type="OpenSimplexNoise" id=11]
+period = 34.0
+persistence = 0.141
+lacunarity = 2.84
+
+[sub_resource type="NoiseTexture" id=12]
+seamless = true
+noise = SubResource( 11 )
+
+[sub_resource type="StreamTexture" id=13]
+flags = 23
+load_path = "res://.import/cubeworld_texture.tga-c18d2d50f29f4012cd049b5960bd5299.s3tc.stex"
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = ExtResource( 6 )
+shader_param/albedo = Color( 1, 1, 1, 0 )
+shader_param/emission_color = Color( 0.972549, 0.27451, 0.0588235, 1 )
+shader_param/emission_amount = 0.5
+shader_param/burn_size = 0.1
+shader_param/dissolve_amount = 0.5
+shader_param/texture_albedo = SubResource( 13 )
+shader_param/dissolve_texture = SubResource( 12 )
 
 [sub_resource type="ArrayMesh" id=6]
 resource_name = "presi_large_color3_LOD0"
@@ -181,8 +206,17 @@ light_color = Color( 0.337255, 0, 0, 1 )
 light_energy = 30.0
 omni_range = 0.507162
 
+[node name="DissolvingSphere" type="MeshInstance" parent="mesh"]
+visible = false
+mesh = SubResource( 4 )
+material/0 = SubResource( 14 )
+script = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="mesh/DissolvingSphere"]
+
 [node name="presi_large_color3_LOD0" type="MeshInstance" parent="mesh"]
 transform = Transform( 0.96, 0, 0, 0, 0.96, 0, 0, 0, 0.96, 0, 0, 0 )
+visible = false
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
@@ -258,6 +292,7 @@ light_color = Color( 0.337255, 0, 0, 1 )
 light_energy = 30.0
 omni_range = 0.507162
 
+[connection signal="tween_all_completed" from="mesh/DissolvingSphere/Tween" to="mesh/DissolvingSphere" method="_on_Tween_tween_all_completed"]
 [connection signal="body_entered" from="area_collections/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="area_collections/Area2" to="." method="_on_Area2_body_entered"]
 [connection signal="body_entered" from="area_collections/Area3" to="." method="_on_Area3_body_entered"]

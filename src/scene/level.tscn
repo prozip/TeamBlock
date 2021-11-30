@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
 [ext_resource path="res://scripts/MainBlock.gd" type="Script" id=3]
 [ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=4]
@@ -184,7 +184,9 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Restart" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
 [connection signal="pressed" from="Prev" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_Button3_pressed"]
 
 [editable path="MainBlock"]
+[editable path="MenuContainer"]
