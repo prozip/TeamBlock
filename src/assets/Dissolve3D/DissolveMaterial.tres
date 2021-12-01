@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://assets/Dissolve3D/noise_tex.tres" type="Texture" id=1]
+[ext_resource path="res://assets/Shader/dissolve.shader" type="Shader" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 23
+load_path = "res://.import/cubeworld_texture.tga-c18d2d50f29f4012cd049b5960bd5299.s3tc.stex"
+
+[resource]
+shader = ExtResource( 2 )
+shader_param/albedo = Color( 1, 1, 1, 0 )
+shader_param/emission_color = Color( 0.972549, 0.27451, 0.0588235, 1 )
+shader_param/emission_amount = 0.5
+shader_param/burn_size = 0.1
+shader_param/dissolve_amount = 0.5
+shader_param/texture_albedo = SubResource( 1 )
+shader_param/dissolve_texture = ExtResource( 1 )

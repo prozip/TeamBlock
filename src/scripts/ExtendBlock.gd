@@ -3,8 +3,6 @@ extends Spatial
 var geo
 signal collide
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var index = int(Autoload.current_level / 10)
 	$mesh.get_child(index).visible = true
@@ -16,7 +14,6 @@ func run(body, direction, num):
 		emit_signal("collide","Block", geo)
 	elif body.is_in_group("wall"):
 		Autoload.move[num] = false
-		print("wall", direction)
 
 func _on_Area_body_entered(body):
 	run(body, $area_collections/Area.transform.origin, 3)
@@ -35,6 +32,7 @@ func _on_Area5_body_entered(body):
 		body.on_collide($lava_block.visible)
 	elif body.is_in_group("hole"):
 		$AnimationPlayer.play("fall")
-	elif body.is_in_group("lava"):
-		$mesh.visible = false
+	elif body.is_in_group("lava") && !$lava_block.visible:
+		$mesh/DissolvingSphere.dissolve()
+		#$mesh.visible = false
 		$lava_block.visible = true
