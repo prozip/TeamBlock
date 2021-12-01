@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/ExtendBlock.gd" type="Script" id=1]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_texture.tga" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_mat.material" type="Material" id=4]
 [ext_resource path="res://assets/Dissolve3D/DissolvingSphere.gd" type="Script" id=5]
 [ext_resource path="res://assets/Shader/dissolve.shader" type="Shader" id=6]
+[ext_resource path="res://assets/cube/Untitled_out/1K-wood_plank_7-diffuse.jpg" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fall"
@@ -39,8 +40,8 @@ tracks/1/keys = {
 
 [sub_resource type="SpatialMaterial" id=2]
 vertex_color_use_as_albedo = true
+albedo_color = Color( 0.909804, 0.784314, 0.784314, 1 )
 albedo_texture = ExtResource( 2 )
-metallic = 0.2
 roughness = 0.8
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
@@ -62,6 +63,19 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 1398
 }
+
+[sub_resource type="SpatialMaterial" id=16]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( 2 )
+metallic = 1.0
+metallic_specular = 0.7
+metallic_texture = ExtResource( 7 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
 
 [sub_resource type="ArrayMesh" id=15]
 resource_name = "block_stone1_6_LOD0"
@@ -157,18 +171,14 @@ surfaces/0 = {
 "vertex_count": 1471
 }
 
-<<<<<<< HEAD
-[sub_resource type="SpatialMaterial" id=12]
-=======
 [sub_resource type="SpatialMaterial" id=5]
->>>>>>> d9eb39b49f127ec32cd79f4ba8ced712f70b066a
 albedo_texture = ExtResource( 2 )
 
 [sub_resource type="BoxShape" id=13]
 extents = Vector3( 0, 0, 0 )
 
 [sub_resource type="SpatialMaterial" id=14]
-albedo_color = Color( 0.627451, 0.372549, 0.207843, 1 )
+albedo_color = Color( 0.635294, 0.301961, 0.196078, 1 )
 albedo_texture = ExtResource( 2 )
 
 [node name="ExtendBlock" type="Spatial" groups=[
@@ -183,9 +193,10 @@ anims/fall = SubResource( 1 )
 
 [node name="box_wooden_3_LOD0" type="MeshInstance" parent="mesh"]
 transform = Transform( 0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 0, 0, 0 )
-visible = false
 mesh = SubResource( 3 )
-material/0 = null
+material/0 = SubResource( 16 )
+
+[node name="Tween" type="Tween" parent="mesh/box_wooden_3_LOD0"]
 
 [node name="DissolvingSphere" type="MeshInstance" parent="mesh"]
 visible = false
@@ -211,7 +222,7 @@ transform = Transform( 0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 0, 0, 0 )
 visible = false
 layers = 2
 mesh = SubResource( 4 )
-material/0 = SubResource( 12 )
+material/0 = SubResource( 5 )
 
 [node name="OmniLight" type="OmniLight" parent="mesh/block_stone1_6_LOD1"]
 transform = Transform( 1.08696, 0, 0, 0, 1.08696, 0, 0, 0, 1.08696, 0.537647, 0.0655206, 0.0161055 )
@@ -310,6 +321,7 @@ light_color = Color( 0.337255, 0, 0, 1 )
 light_energy = 30.0
 omni_range = 0.507162
 
+[connection signal="tween_all_completed" from="mesh/box_wooden_3_LOD0/Tween" to="mesh/DissolvingSphere" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="mesh/DissolvingSphere/Tween" to="mesh/DissolvingSphere" method="_on_Tween_tween_all_completed"]
 [connection signal="body_entered" from="area_collections/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="area_collections/Area2" to="." method="_on_Area2_body_entered"]
