@@ -23,3 +23,4 @@ func animate_dissolve(progress: float) -> void:
 
 func _on_Tween_tween_all_completed() -> void:
 	visible = false
+	queue_free()

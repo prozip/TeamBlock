@@ -121,6 +121,5 @@ func _on_Button3_pressed():
 		Autoload.current_level += 1
 	restart()
 
-
 func _on_Pause_pressed():
 	$MenuContainer/PausePopup.pause_game()
