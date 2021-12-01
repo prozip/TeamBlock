@@ -11,6 +11,7 @@ func run(body, direction, num):
 	geo = body.transform.origin
 	if body.is_in_group("block"):
 		body.queue_free()
+		print("remove")
 		emit_signal("collide","Block", geo)
 	elif body.is_in_group("wall"):
 		Autoload.move[num] = false
