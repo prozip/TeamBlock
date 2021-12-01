@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func dissolve():
 	print("disolve")
-	visible = true
+	self.visible = true
 	tween.interpolate_method(
 		self, "animate_dissolve", 0, 1, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 	)
@@ -22,5 +22,4 @@ func animate_dissolve(progress: float) -> void:
 
 
 func _on_Tween_tween_all_completed() -> void:
-	visible = false
-	queue_free()
+	self.visible = false
