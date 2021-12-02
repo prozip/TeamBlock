@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://scripts/MainBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
 [ext_resource path="res://scripts/MainBlock.gd" type="Script" id=3]
 [ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=4]
@@ -174,11 +174,23 @@ environment = SubResource( 10 )
 layer = -1
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-margin_right = 1366.0
-margin_bottom = 768.0
+margin_left = 2.11896
+margin_top = 2.11893
+margin_right = 1368.12
+margin_bottom = 770.119
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="RichTextLabel" parent="."]
+margin_left = 286.055
+margin_top = 25.4271
+margin_right = 415.055
+margin_bottom = 99.4271
+text = "abc 123"
 __meta__ = {
 "_edit_use_anchors_": false
 }
