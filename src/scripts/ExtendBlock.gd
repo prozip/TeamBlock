@@ -35,6 +35,11 @@ func _on_Area5_body_entered(body):
 		body.on_collide($lava_block.visible)
 	elif body.is_in_group("hole"):
 		$AnimationPlayer.play("fall")
+	elif body.is_in_group("ice"):
+		if body.get_child(1).visible:
+			body.get_child(1).visible = false
+		else:
+			$AnimationPlayer.play("fall")
 	elif body.is_in_group("lava") && !$lava_block.visible:
 		$mesh/DissolvingSphere.dissolve()
 		#$mesh.visible = false
