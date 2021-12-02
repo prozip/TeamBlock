@@ -14,13 +14,28 @@ var width = 0
 var height = 0
 var map = []
 
+func check_overlap(location) -> bool:
+	print("   ")
+	var child_array = MainBlock.get_child(0)
+	var current_location = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
+	print(current_location)
+	for x in range(child_array.get_child_count()):
+		var child = child_array.get_child(x)
+		print(child.transform.origin)
+		if (child.transform.origin.x == current_location.x
+		&& child.transform.origin.z == current_location.z):
+			return false
+	return true
+
 func addBlock(character, location):
 	if character == "1":
-		var extendBlock = ExtendBlock.instance()
-		extendBlock.transform.origin = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
-		extendBlock.connect("collide", self, "on_collide")
-		MainBlock.add_child(extendBlock)
-		addBlock("o", location)
+		if check_overlap(location):
+			print("false")
+			var extendBlock = ExtendBlock.instance()
+			extendBlock.transform.origin = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
+			extendBlock.connect("collide", self, "on_collide")
+			MainBlock.get_child(0).add_child(extendBlock)
+			addBlock("o", location)
 	
 	elif character == "3":
 		var target = Target.instance()
@@ -100,6 +115,7 @@ func generate_map():
 func _ready():
 	read_file(Autoload.files[Autoload.current_level])
 	generate_map()
+	$name.text = "Level " + str(Autoload.current_level + 1)
 	
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))

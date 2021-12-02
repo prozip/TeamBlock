@@ -118,7 +118,6 @@ material/0 = SubResource( 3 )
 [node name="mesh" type="Spatial" parent="."]
 
 [node name="box_wooden_4_LOD0" type="MeshInstance" parent="mesh"]
-visible = false
 mesh = SubResource( 5 )
 material/0 = null
 
