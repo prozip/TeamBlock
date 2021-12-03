@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=24 format=2]
-=======
 [gd_scene load_steps=23 format=2]
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 
 [ext_resource path="res://scripts/ExtendBlock.gd" type="Script" id=1]
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_texture.tga" type="Texture" id=2]
@@ -10,7 +6,6 @@
 [ext_resource path="res://assets/cube/Untitled_out/cubeworld_mat.material" type="Material" id=4]
 [ext_resource path="res://assets/Dissolve3D/DissolvingSphere.gd" type="Script" id=5]
 [ext_resource path="res://assets/Shader/dissolve.shader" type="Shader" id=6]
-[ext_resource path="res://assets/cube/Untitled_out/1K-wood_plank_7-diffuse.jpg" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fall"
@@ -68,20 +63,11 @@ surfaces/0 = {
 "vertex_count": 1398
 }
 
-<<<<<<< HEAD
-[sub_resource type="SpatialMaterial" id=16]
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource( 2 )
-metallic = 1.0
-metallic_specular = 0.7
-metallic_texture = ExtResource( 7 )
-=======
 [sub_resource type="SpatialMaterial" id=4]
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource( 2 )
 metallic = 0.58
 metallic_specular = 0.7
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 emission_enabled = true
 emission = Color( 0, 0, 0, 1 )
 emission_energy = 1.0
@@ -89,11 +75,7 @@ emission_operator = 0
 emission_on_uv2 = false
 emission_texture = ExtResource( 3 )
 
-<<<<<<< HEAD
-[sub_resource type="ArrayMesh" id=15]
-=======
 [sub_resource type="ArrayMesh" id=5]
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 resource_name = "block_stone1_6_LOD0"
 surfaces/0 = {
 "aabb": AABB( -0.557677, -0.564388, -0.556663, 1.11542, 1.10543, 1.11543 ),
@@ -192,11 +174,7 @@ albedo_texture = ExtResource( 2 )
 [sub_resource type="BoxShape" id=15]
 extents = Vector3( 0, 0, 0 )
 
-<<<<<<< HEAD
-[sub_resource type="SpatialMaterial" id=14]
-=======
 [sub_resource type="SpatialMaterial" id=16]
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 albedo_color = Color( 0.635294, 0.301961, 0.196078, 1 )
 albedo_texture = ExtResource( 2 )
 
@@ -213,13 +191,7 @@ anims/fall = SubResource( 1 )
 [node name="box_wooden_3_LOD0" type="MeshInstance" parent="mesh"]
 transform = Transform( 0.92, 0, 0, 0, 0.92, 0, 0, 0, 0.92, 0, 0, 0 )
 mesh = SubResource( 3 )
-<<<<<<< HEAD
-material/0 = SubResource( 16 )
-
-[node name="Tween" type="Tween" parent="mesh/box_wooden_3_LOD0"]
-=======
 material/0 = SubResource( 4 )
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 
 [node name="DissolvingSphere" type="MeshInstance" parent="mesh"]
 visible = false
@@ -374,7 +346,6 @@ light_color = Color( 0.337255, 0, 0, 1 )
 light_energy = 30.0
 omni_range = 0.507162
 
-[connection signal="tween_all_completed" from="mesh/box_wooden_3_LOD0/Tween" to="mesh/DissolvingSphere" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="mesh/DissolvingSphere/Tween" to="mesh/DissolvingSphere" method="_on_Tween_tween_all_completed"]
 [connection signal="body_entered" from="area_collections/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="area_collections/Area2" to="." method="_on_Area2_body_entered"]

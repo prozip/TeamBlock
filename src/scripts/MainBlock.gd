@@ -76,7 +76,6 @@ func check_win():
 	var total_target_block = Autoload.target_block +Autoload.target_lava
 	move_count += 1
 	Autoload.move_count = move_count
-<<<<<<< HEAD
 	$Panel/Label.text = str(move_count)
 	print('totalblock', total_block)
 	print('totaltarget', total_target)
@@ -84,12 +83,9 @@ func check_win():
 	print('total_target_lava',Autoload.target_lava_num)
 	print('total_lava', Autoload.target_lava)
 	print('.......')
-=======
-	
 	print(total_block, " ", total_target, " ", total_target_block)
 	
 	$Panel/Label.text = str(move_count) 
->>>>>>> 9489e148439a538e54629431055189f2c82eb5fb
 	if (total_block == total_target && total_block == total_target_block
 	&& Autoload.target_lava_num == Autoload.target_lava):
 		$SceneTransition.transition_to("res://scene/Victory.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://UI/Circle3_White3.png" type="Texture" id=11]
 [ext_resource path="res://UI/Circle3_White2.png" type="Texture" id=12]
 [ext_resource path="res://scripts/tut.gd" type="Script" id=13]
+[ext_resource path="res://assets/Snow/SnowTexture.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 12 )
@@ -51,7 +52,6 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="Environment" id=10]
 background_mode = 4
-background_color = Color( 0.407843, 0.176471, 0.152941, 1 )
 background_energy = 0.0
 background_canvas_max_layer = -1
 ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
@@ -59,6 +59,26 @@ ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
 [sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="ParticlesMaterial" id=12]
+emission_shape = 2
+emission_box_extents = Vector3( 4, 1, 8 )
+direction = Vector3( 1, -2, 0 )
+spread = 30.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 4.5
+scale = 0.15
+
+[sub_resource type="SpatialMaterial" id=13]
+flags_transparent = true
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 14 )
+
+[sub_resource type="QuadMesh" id=14]
+material = SubResource( 13 )
 
 [node name="level" type="Spatial"]
 script = ExtResource( 2 )
@@ -212,6 +232,13 @@ stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 0.99993, 0, 0.0118505, 0, 1, 0, -0.0118505, 0, 0.99993, 9.19448, 14.5454, -10.4606 )
+amount = 128
+visibility_aabb = AABB( -26.3134, -4, -26.1563, 52.6269, 8, 52.3125 )
+process_material = SubResource( 12 )
+draw_pass_1 = SubResource( 14 )
 
 [connection signal="pressed" from="Restart" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
