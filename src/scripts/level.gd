@@ -8,6 +8,7 @@ onready var Block = preload("res://scene//Block.tscn")
 onready var ExtendBlock = preload("res://scene//ExtendBlock.tscn")
 onready var Hole = preload("res://scene//hole.tscn")
 onready var Lava = preload("res://scene//lava.tscn")
+onready var Ice = preload("res://scene//ice.tscn")
 onready var MainBlock = $MainBlock
 
 var width = 0
@@ -77,6 +78,10 @@ func addBlock(character, location):
 		lava.transform.origin = Vector3(location.x, 0.92, location.y)
 		add_child(lava)
 		
+	elif character == "i":
+		var ice = Ice.instance()
+		ice.transform.origin = Vector3(location.x, 0.55, location.y)
+		add_child(ice)
 	
 	elif character == "x":
 		var wall = Wall.instance()

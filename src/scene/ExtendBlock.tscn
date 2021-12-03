@@ -113,11 +113,11 @@ period = 34.0
 persistence = 0.141
 lacunarity = 2.84
 
-[sub_resource type="NoiseTexture" id=17]
+[sub_resource type="NoiseTexture" id=7]
 seamless = true
 noise = SubResource( 6 )
 
-[sub_resource type="StreamTexture" id=18]
+[sub_resource type="StreamTexture" id=8]
 flags = 23
 load_path = "res://.import/cubeworld_texture.tga-c18d2d50f29f4012cd049b5960bd5299.s3tc.stex"
 
@@ -129,8 +129,8 @@ shader_param/emission_color = Color( 0.972549, 0.27451, 0.0588235, 1 )
 shader_param/emission_amount = 0.5
 shader_param/burn_size = 0.1
 shader_param/dissolve_amount = 0.5
-shader_param/texture_albedo = SubResource( 18 )
-shader_param/dissolve_texture = SubResource( 17 )
+shader_param/texture_albedo = SubResource( 8 )
+shader_param/dissolve_texture = SubResource( 7 )
 
 [sub_resource type="ArrayMesh" id=10]
 surfaces/0 = {
