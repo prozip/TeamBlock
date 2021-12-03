@@ -8,7 +8,7 @@ onready var total_level = len(Autoload.files)
 
 func save_file():
 	var config = ConfigFile.new()
-	config.set_value("Player1", "unlock_level", 2)
+	config.set_value("Player1", "unlock_level", 21)
 	config.save("user://save_data.cfg")
 
 func load_file():

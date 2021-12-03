@@ -120,6 +120,8 @@ func generate_map():
 func _ready():
 	read_file(Autoload.files[Autoload.current_level])
 	generate_map()
+	if Autoload.current_level > 19:
+		$Particles.visible = true
 	$name.text = "Level " + str(Autoload.current_level + 1)
 	
 func on_collide(obj, geo):

@@ -235,6 +235,7 @@ __meta__ = {
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 0.99993, 0, 0.0118505, 0, 1, 0, -0.0118505, 0, 0.99993, 9.19448, 14.5454, -10.4606 )
+visible = false
 amount = 128
 visibility_aabb = AABB( -26.3134, -4, -26.1563, 52.6269, 8, 52.3125 )
 process_material = SubResource( 12 )
