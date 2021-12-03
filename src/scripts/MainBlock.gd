@@ -76,9 +76,6 @@ func check_win():
 	var total_target_block = Autoload.target_block +Autoload.target_lava
 	move_count += 1
 	Autoload.move_count = move_count
-	
-	print(total_block, " ", total_target, " ", total_target_block)
-	
 	$Panel/Label.text = str(move_count) 
 	if (total_block == total_target && total_block == total_target_block
 	&& Autoload.target_lava_num == Autoload.target_lava):

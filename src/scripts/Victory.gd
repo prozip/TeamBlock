@@ -1,6 +1,12 @@
 extends Control
 
+func save_file():
+	var config = ConfigFile.new()
+	config.set_value("Player1", "unlock_level", Autoload.current_level + 1)
+	config.save("user://save_data.cfg")
+
 func _ready():
+	save_file()
 	$Panel/Label.text = " :  "+ str(Autoload.move_count)
 	
 func restart():
