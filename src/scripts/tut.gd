@@ -20,4 +20,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	self.visible = false
+	self.visible = false`
