@@ -184,6 +184,7 @@ __meta__ = {
 }
 
 [node name="SceneTransition" parent="Panel" instance=ExtResource( 12 )]
+visible = false
 
 [connection signal="pressed" from="Panel/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Panel/Replay" to="." method="_on_Replay_pressed"]
