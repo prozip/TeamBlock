@@ -7,13 +7,16 @@ func _ready():
 	var index = int(Autoload.current_level / 10)
 	$mesh.get_child(index).visible = true
 
-func run(body, direction, num):
+func run_safe(body, direction, num):
 	geo = body.transform.origin
 	if body.is_in_group("block"):
 		body.queue_free()
 		emit_signal("collide","Block", geo)
 	elif body.is_in_group("wall"):
 		Autoload.move[num] = false
+		
+func run(body, direction, num):
+	call_deferred("run_safe", body, direction, num)
 
 func _on_Area_body_entered(body):
 	run(body, $area_collections/Area.transform.origin, 3)
