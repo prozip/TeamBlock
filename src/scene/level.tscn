@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scene/MainBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/level.gd" type="Script" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://UI/Circle3_White2.png" type="Texture" id=12]
 [ext_resource path="res://scripts/tut.gd" type="Script" id=13]
 [ext_resource path="res://assets/Snow/SnowTexture.png" type="Texture" id=14]
+[ext_resource path="res://assets/fonts/A001ff-Bold.otf" type="DynamicFontData" id=15]
+[ext_resource path="res://UI/Level.png" type="Texture" id=16]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 12 )
@@ -47,20 +49,28 @@ region_rect = Rect2( 0, 0, 160, 146 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 96, 96 )
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 301, 115 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 53
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="Environment" id=10]
+[sub_resource type="Environment" id=12]
 background_mode = 4
 background_energy = 0.0
 background_canvas_max_layer = -1
 ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
 
-[sub_resource type="StyleBoxTexture" id=11]
+[sub_resource type="StyleBoxTexture" id=13]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticlesMaterial" id=14]
 emission_shape = 2
 emission_box_extents = Vector3( 4, 1, 8 )
 direction = Vector3( 1, -2, 0 )
@@ -69,7 +79,7 @@ gravity = Vector3( 0, 0, 0 )
 initial_velocity = 4.5
 scale = 0.15
 
-[sub_resource type="SpatialMaterial" id=13]
+[sub_resource type="SpatialMaterial" id=15]
 flags_transparent = true
 params_billboard_mode = 3
 particles_anim_h_frames = 1
@@ -77,8 +87,8 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 albedo_texture = ExtResource( 14 )
 
-[sub_resource type="QuadMesh" id=14]
-material = SubResource( 13 )
+[sub_resource type="QuadMesh" id=16]
+material = SubResource( 15 )
 
 [node name="level" type="Spatial"]
 script = ExtResource( 2 )
@@ -135,15 +145,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="Panel" parent="."]
+margin_left = 466.944
+margin_top = 30.2107
+margin_right = 626.944
+margin_bottom = 110.211
+rect_min_size = Vector2( 80, 40 )
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 635.529
+margin_top = 41.0642
+margin_right = 685.529
+margin_bottom = 106.064
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.945098, 0.615686, 0.439216, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MenuContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Prev" type="Button" parent="."]
-margin_left = 581.046
-margin_top = 16.2227
-margin_right = 709.046
-margin_bottom = 144.223
+margin_left = 749.338
+margin_top = 2.08058
+margin_right = 877.338
+margin_bottom = 130.081
 rect_min_size = Vector2( 128, 128 )
-custom_styles/normal = SubResource( 9 )
+custom_styles/normal = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -159,21 +192,25 @@ __meta__ = {
 }
 
 [node name="Next" type="Button" parent="."]
-margin_left = 724.541
-margin_top = 18.2839
-margin_right = 852.541
-margin_bottom = 146.284
+margin_left = 892.832
+margin_top = 22.5265
+margin_right = 1020.83
+margin_bottom = 150.527
 rect_min_size = Vector2( 128, 128 )
-custom_styles/normal = SubResource( 9 )
+custom_styles/normal = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="Next"]
-margin_left = 11.0
-margin_top = 27.0
-margin_right = 107.0
-margin_bottom = 123.0
+anchor_left = 1.478
+anchor_top = 0.1
+anchor_right = 1.478
+anchor_bottom = 0.1
+margin_left = -189.184
+margin_top = -12.8
+margin_right = -93.184
+margin_bottom = 83.2
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -189,7 +226,7 @@ smooth_speed = 2.0
 offset = Vector3( 19.78, 26.24, -10.7 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 10 )
+environment = SubResource( 12 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -201,17 +238,7 @@ margin_right = 1368.12
 margin_bottom = 770.119
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="name" type="RichTextLabel" parent="."]
-margin_left = 286.055
-margin_top = 25.4271
-margin_right = 415.055
-margin_bottom = 99.4271
-text = "abc 123"
+custom_styles/panel = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -227,6 +254,10 @@ __meta__ = {
 [node name="tut" type="TextureRect" parent="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1099.91
+margin_top = 419.14
+margin_right = 1099.91
+margin_bottom = 419.14
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -237,8 +268,8 @@ __meta__ = {
 transform = Transform( 0.99993, 0, 0.0118505, 0, 1, 0, -0.0118505, 0, 0.99993, 9.19448, 14.5454, -10.4606 )
 amount = 128
 visibility_aabb = AABB( -26.3134, -4, -26.1563, 52.6269, 8, 52.3125 )
-process_material = SubResource( 12 )
-draw_pass_1 = SubResource( 14 )
+process_material = SubResource( 14 )
+draw_pass_1 = SubResource( 16 )
 
 [connection signal="pressed" from="Restart" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
