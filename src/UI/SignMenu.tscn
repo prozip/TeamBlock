@@ -648,13 +648,12 @@ text = "Master Audio"
 [node name="HSlider" type="HSlider" parent="Settings/HBoxContainer/Control/ScrollContainer/MarginContainer/VBoxContainer"]
 margin_top = 31.0
 margin_right = 283.0
-margin_bottom = 51.0
+margin_bottom = 47.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="testchamber-sign" type="Sprite" parent="."]
-visible = false
 position = Vector2( 192, 384 )
 scale = Vector2( 0.5, 0.5 )
 z_index = -6

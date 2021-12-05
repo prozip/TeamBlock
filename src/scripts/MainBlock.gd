@@ -79,6 +79,7 @@ func check_win():
 	$Panel/Label.text = str(move_count) 
 	if (total_block == total_target && total_block == total_target_block
 	&& Autoload.target_lava_num == Autoload.target_lava):
+		Autoload.move = [false, false, false, false]
 		$SceneTransition.transition_to("res://scene/Victory.tscn")
 	else:
 		Autoload.reset_target()

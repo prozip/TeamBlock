@@ -7,6 +7,11 @@ func save_file():
 
 func _ready():
 	save_file()
+	if Autoload.current_level > 9:
+		if Autoload.current_level < 20:
+			$Panel.get_stylebox("panel", "").texture = load("res://assets/Congrat/You win Lava.png")
+		else:
+			$Panel.get_stylebox("panel", "").texture = load("res://assets/Congrat/You win Snow.jpg")
 	$Panel/Label.text = " :  "+ str(Autoload.move_count)
 	
 func restart():
