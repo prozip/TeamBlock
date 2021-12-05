@@ -122,7 +122,7 @@ func _ready():
 	generate_map()
 	if Autoload.current_level > 19:
 		$Particles.visible = true
-	$name.text = "Level " + str(Autoload.current_level + 1)
+	$name.text = str(Autoload.current_level + 1)
 	
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))

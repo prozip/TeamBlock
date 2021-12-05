@@ -156,7 +156,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="name" type="Label" parent="."]
 margin_left = 635.529
 margin_top = 41.0642
 margin_right = 685.529
@@ -246,6 +246,7 @@ __meta__ = {
 [node name="Button" type="Button" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_min_size = Vector2( 1366, 768 )
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -254,10 +255,7 @@ __meta__ = {
 [node name="tut" type="TextureRect" parent="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1099.91
-margin_top = 419.14
-margin_right = 1099.91
-margin_bottom = 419.14
+margin_right = 0.00012207
 expand = true
 stretch_mode = 6
 __meta__ = {
