@@ -63,11 +63,15 @@ InputManager="*res://GDTIM-v1_1_0/InputManager.gd"
 
 window/size/width=2240
 window/size/height=1080
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [global]
 
 touch=false
 full=false
+dis=false
+display=false
 
 [input]
 

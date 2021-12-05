@@ -54,7 +54,7 @@ texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 301, 115 )
 
 [sub_resource type="DynamicFont" id=10]
-size = 53
+size = 120
 font_data = ExtResource( 15 )
 
 [sub_resource type="StyleBoxFlat" id=11]
@@ -96,14 +96,51 @@ script = ExtResource( 2 )
 [node name="MainBlock" parent="." instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
+[node name="SceneTransition" parent="MainBlock" index="1"]
+margin_left = -2.24487
+margin_top = 2.245
+margin_right = -2.24487
+margin_bottom = 2.245
+
+[node name="Panel" parent="MainBlock" index="3"]
+anchor_left = 0.879
+anchor_top = 0.157
+anchor_right = 0.879
+anchor_bottom = 0.157
+margin_left = -268.96
+margin_top = -149.56
+margin_right = 271.04
+margin_bottom = 150.44
+rect_min_size = Vector2( 540, 300 )
+
+[node name="Panel" parent="MainBlock/Panel" index="0"]
+anchor_left = 0.431
+anchor_right = 0.431
+margin_left = -224.74
+margin_top = -110.0
+margin_right = 225.26
+margin_bottom = 130.0
+
+[node name="Label" parent="MainBlock/Panel" index="1"]
+anchor_left = 0.772
+anchor_top = 0.585
+anchor_right = 0.772
+anchor_bottom = 0.585
+margin_left = -49.8024
+margin_top = -75.8726
+margin_right = 50.1976
+margin_bottom = 60.1274
+
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
 light_color = Color( 0.701961, 0.85098, 0.901961, 1 )
 
 [node name="Restart" type="Button" parent="."]
-margin_right = 120.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 120, 110 )
+margin_left = 60.0
+margin_top = 100.0
+margin_right = 240.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 180, 165 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
@@ -112,10 +149,14 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Restart"]
-margin_left = 10.0
-margin_top = 5.0
-margin_right = 110.0
-margin_bottom = 105.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -75.0
+margin_right = 75.0
+margin_bottom = 75.0
 mouse_filter = 2
 custom_styles/panel = SubResource( 4 )
 __meta__ = {
@@ -123,10 +164,11 @@ __meta__ = {
 }
 
 [node name="Pause" type="Button" parent="."]
-margin_left = 130.0
-margin_right = 250.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 120, 110 )
+margin_left = 260.0
+margin_top = 100.0
+margin_right = 440.0
+margin_bottom = 265.0
+rect_min_size = Vector2( 180, 165 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
@@ -135,21 +177,29 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Pause"]
-margin_left = 20.0
-margin_top = 13.0
-margin_right = 100.0
-margin_bottom = 93.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 60.0
+margin_bottom = 60.0
 mouse_filter = 2
 custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 466.944
-margin_top = 30.2107
-margin_right = 626.944
-margin_bottom = 110.211
+[node name="Level" type="Panel" parent="."]
+anchor_left = 0.492
+anchor_top = 0.153
+anchor_right = 0.492
+anchor_bottom = 0.153
+margin_left = -179.08
+margin_top = -90.24
+margin_right = 180.92
+margin_bottom = 89.76
 rect_min_size = Vector2( 80, 40 )
 custom_styles/panel = SubResource( 9 )
 __meta__ = {
@@ -157,10 +207,14 @@ __meta__ = {
 }
 
 [node name="name" type="Label" parent="."]
-margin_left = 635.529
-margin_top = 41.0642
-margin_right = 685.529
-margin_bottom = 106.064
+anchor_left = 0.589
+anchor_top = 0.155
+anchor_right = 0.589
+anchor_bottom = 0.155
+margin_left = -38.1343
+margin_top = -68.4203
+margin_right = 36.8657
+margin_bottom = 67.5797
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.945098, 0.615686, 0.439216, 1 )
 text = "1"
@@ -171,10 +225,10 @@ __meta__ = {
 [node name="MenuContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Prev" type="Button" parent="."]
-margin_left = 749.338
-margin_top = 2.08058
-margin_right = 877.338
-margin_bottom = 130.081
+margin_left = 1456.44
+margin_top = 86.9334
+margin_right = 1584.44
+margin_bottom = 214.934
 rect_min_size = Vector2( 128, 128 )
 custom_styles/normal = SubResource( 11 )
 __meta__ = {
@@ -192,10 +246,10 @@ __meta__ = {
 }
 
 [node name="Next" type="Button" parent="."]
-margin_left = 892.832
-margin_top = 22.5265
-margin_right = 1020.83
-margin_bottom = 150.527
+margin_left = 1599.94
+margin_top = 107.379
+margin_right = 1727.94
+margin_bottom = 235.38
 rect_min_size = Vector2( 128, 128 )
 custom_styles/normal = SubResource( 11 )
 __meta__ = {
@@ -232,10 +286,12 @@ environment = SubResource( 12 )
 layer = -1
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-margin_left = 2.11896
-margin_top = 2.11893
-margin_right = 1368.12
-margin_bottom = 770.119
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.24512
+margin_top = -2.24493
+margin_right = -2.24512
+margin_bottom = -2.24487
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 13 )
@@ -244,6 +300,7 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 1366, 768 )

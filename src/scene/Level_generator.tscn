@@ -17,14 +17,20 @@ region_rect = Rect2( 0, 0, 122, 122 )
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 85
+size = 120
 outline_size = 3
 font_data = ExtResource( 3 )
 
 [node name="Button" type="Button"]
-margin_right = 180.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 180, 180 )
+anchor_left = 0.06
+anchor_top = 0.125
+anchor_right = 0.06
+anchor_bottom = 0.125
+margin_left = -134.4
+margin_top = -135.0
+margin_right = 45.6
+margin_bottom = 45.0
+rect_min_size = Vector2( 270, 270 )
 mouse_filter = 1
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -39,7 +45,8 @@ __meta__ = {
 margin_left = 15.0
 margin_top = 10.0
 margin_right = 165.0
-margin_bottom = 160.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 225, 225 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -47,9 +54,10 @@ __meta__ = {
 }
 
 [node name="Level_name" type="Label" parent="."]
-margin_top = 25.0
-margin_right = 180.0
-margin_bottom = 205.0
+margin_left = 30.0
+margin_top = 40.0
+margin_right = 210.0
+margin_bottom = 220.0
 rect_min_size = Vector2( 90, 90 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0862745, 0.203922, 0.262745, 1 )
@@ -60,11 +68,10 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-margin_left = 95.0
-margin_top = 85.0
-margin_right = 145.0
-margin_bottom = 158.0
+margin_left = 127.0
+margin_top = 123.0
+margin_right = 177.0
+margin_bottom = 196.0
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 5
