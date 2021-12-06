@@ -8,7 +8,7 @@
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 2 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=12]
 length = 0.001
 step = 0.05
 tracks/0/type = "value"
@@ -36,8 +36,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "flicker-off"
+[sub_resource type="Animation" id=13]
 length = 2.5
 step = 0.05
 tracks/0/type = "value"
@@ -65,7 +64,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=14]
 length = 2.5
 step = 0.05
 tracks/0/type = "value"
@@ -93,7 +92,7 @@ tracks/1/keys = {
 "values": [ false, true, false, true ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=15]
 length = 0.7
 step = 0.05
 tracks/0/type = "value"
@@ -153,7 +152,6 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 768, 1536 )
 
 [node name="Overlay" type="Control" parent="PausePopup/TestchamberSign"]
-visible = false
 modulate = Color( 1, 1, 1, 0.85098 )
 margin_left = 192.0
 margin_top = 384.0
@@ -171,10 +169,10 @@ margin_bottom = 384.0
 pause_menu = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PausePopup/TestchamberSign"]
-anims/BindPose = SubResource( 2 )
-anims/flicker-off = SubResource( 3 )
-anims/flicker-on = SubResource( 4 )
-anims/flicker_change = SubResource( 5 )
+anims/BindPose = SubResource( 12 )
+anims/flicker-off = SubResource( 13 )
+anims/flicker-on = SubResource( 14 )
+anims/flicker_change = SubResource( 15 )
 
 [connection signal="change_menu" from="PausePopup/TestchamberSign/Overlay/SignMenu" to="PausePopup" method="flicker_change"]
 [connection signal="exit_menu" from="PausePopup/TestchamberSign/Overlay/SignMenu" to="PausePopup" method="menu_off"]
