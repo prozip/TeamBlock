@@ -16,73 +16,73 @@
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 940, 318 )
 
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 1143, 728 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 290, 100 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 290, 100 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.105882, 0.666667, 0.894118, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.423529, 0.423529, 0.423529, 0 )
 corner_radius_top_left = 75
 corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 290, 100 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxTexture" id=12]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 162, 162 )
-
 [sub_resource type="StyleBoxTexture" id=13]
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 162, 162 )
 
 [sub_resource type="StyleBoxTexture" id=14]
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 162, 162 )
 
 [sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 162, 162 )
+
+[sub_resource type="StyleBoxTexture" id=16]
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 128, 128 )
 
@@ -105,7 +105,7 @@ margin_top = -186.84
 margin_right = 500.88
 margin_bottom = 186.16
 rect_min_size = Vector2( 1000, 373 )
-custom_styles/panel = SubResource( 16 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -120,7 +120,7 @@ margin_top = -246.711
 margin_right = 698.981
 margin_bottom = 503.289
 rect_min_size = Vector2( 520, 435 )
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -138,9 +138,9 @@ rect_min_size = Vector2( 550, 200 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 size_flags_stretch_ratio = 0.7
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -167,9 +167,9 @@ margin_bottom = 99.75
 rect_min_size = Vector2( 550, 200 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -196,9 +196,9 @@ margin_bottom = 110.0
 rect_min_size = Vector2( 550, 200 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 10 )
-custom_styles/normal = SubResource( 11 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -223,9 +223,9 @@ margin_left = -186.343
 margin_top = -185.024
 margin_right = -36.3428
 margin_bottom = -35.0242
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -237,7 +237,7 @@ margin_right = 125.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 100, 100 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 15 )
+custom_styles/panel = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -103,33 +103,35 @@ margin_right = -2.24487
 margin_bottom = 2.245
 
 [node name="Panel" parent="MainBlock" index="3"]
-anchor_left = 0.879
-anchor_top = 0.157
-anchor_right = 0.879
-anchor_bottom = 0.157
-margin_left = -268.96
-margin_top = -149.56
-margin_right = 271.04
-margin_bottom = 150.44
+anchor_left = 0.881
+anchor_top = 0.129
+anchor_right = 0.881
+anchor_bottom = 0.129
+margin_left = -270.611
+margin_top = -150.433
+margin_right = 269.389
+margin_bottom = 149.567
 rect_min_size = Vector2( 540, 300 )
 
 [node name="Panel" parent="MainBlock/Panel" index="0"]
 anchor_left = 0.431
+anchor_top = 0.54
 anchor_right = 0.431
+anchor_bottom = 0.54
 margin_left = -224.74
-margin_top = -110.0
+margin_top = -122.0
 margin_right = 225.26
-margin_bottom = 130.0
+margin_bottom = 121.9
 
 [node name="Label" parent="MainBlock/Panel" index="1"]
 anchor_left = 0.772
-anchor_top = 0.585
+anchor_top = 0.559
 anchor_right = 0.772
-anchor_bottom = 0.585
+anchor_bottom = 0.559
 margin_left = -49.8024
-margin_top = -75.8726
+margin_top = -68.0726
 margin_right = 50.1976
-margin_bottom = 60.1274
+margin_bottom = 67.9274
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.5324, 0 )
@@ -137,9 +139,9 @@ light_color = Color( 0.701961, 0.85098, 0.901961, 1 )
 
 [node name="Restart" type="Button" parent="."]
 margin_left = 60.0
-margin_top = 100.0
+margin_top = 60.0
 margin_right = 240.0
-margin_bottom = 255.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 180, 165 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -165,9 +167,9 @@ __meta__ = {
 
 [node name="Pause" type="Button" parent="."]
 margin_left = 260.0
-margin_top = 100.0
+margin_top = 60.0
 margin_right = 440.0
-margin_bottom = 265.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 180, 165 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
