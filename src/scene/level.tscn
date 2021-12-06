@@ -279,7 +279,7 @@ fov = 35.0
 far = 50.0
 script = ExtResource( 5 )
 smooth_speed = 2.0
-offset = Vector3( 19.78, 26.24, -10.7 )
+offset = Vector3( 19.78, 26.24, -7 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 12 )
