@@ -16,7 +16,6 @@ var height = 0
 var map = []
 
 func check_overlap(location) -> bool:
-	print("   ")
 	var child_array = MainBlock.get_child(0)
 	var current_location = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
 	print(current_location)
