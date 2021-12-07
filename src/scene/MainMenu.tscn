@@ -100,11 +100,11 @@ anchor_left = 0.513
 anchor_top = 0.173
 anchor_right = 0.513
 anchor_bottom = 0.173
-margin_left = -499.12
+margin_left = -599.12
 margin_top = -186.84
-margin_right = 500.88
-margin_bottom = 186.16
-rect_min_size = Vector2( 1000, 373 )
+margin_right = 600.88
+margin_bottom = 213.16
+rect_min_size = Vector2( 1200, 400 )
 custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -146,10 +146,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel/NewGame"]
-margin_left = -20.0
-margin_top = -30.0
-margin_right = 590.0
-margin_bottom = 252.0
+margin_left = 53.0
+margin_top = 5.0
+margin_right = 663.0
+margin_bottom = 287.0
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -175,10 +175,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Continues"]
-margin_left = -20.0
-margin_top = -30.0
-margin_right = 569.0
-margin_bottom = 252.0
+margin_left = 53.0
+margin_top = 5.0
+margin_right = 642.0
+margin_bottom = 287.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -204,10 +204,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Quit Game"]
-margin_left = -20.0
-margin_top = -30.0
-margin_right = 583.0
-margin_bottom = 252.0
+margin_left = 53.0
+margin_top = 5.0
+margin_right = 656.0
+margin_bottom = 287.0
 rect_min_size = Vector2( 238, 141 )
 texture = ExtResource( 5 )
 __meta__ = {
