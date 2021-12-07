@@ -31,7 +31,6 @@ func check_overlap(location) -> bool:
 func addBlock(character, location):
 	if character == "1":
 		if check_overlap(location):
-			print("false")
 			var extendBlock = ExtendBlock.instance()
 			extendBlock.transform.origin = Vector3(location.x - MainBlock.point.x, 0.5, location.y - MainBlock.point.z)
 			extendBlock.connect("collide", self, "on_collide")
@@ -129,10 +128,12 @@ func on_collide(obj, geo):
 
 func restart():
 	Autoload.full_reset()
-	get_tree().change_scene("res://scene/level.tscn")
+	SceneChanger.goto_scene("res://scene/level.tscn", self)
+	#get_tree().change_scene("res://scene/level.tscn")
 
 func _on_Button_pressed():
 	restart()
 
 func _on_Pause_pressed():
-	$MenuContainer/PausePopup.pause_game()
+	SceneChanger.goto_scene("res://scene/MainMenu.tscn", self)
+	#$MenuContainer/PausePopup.pause_game()

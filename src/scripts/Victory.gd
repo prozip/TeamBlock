@@ -16,7 +16,8 @@ func _ready():
 	
 func restart():
 	Autoload.full_reset()
-	get_tree().change_scene("res://scene/level.tscn")
+	SceneChanger.goto_scene("res://scene/level.tscn", self)
+	#get_tree().change_scene("res://scene/level.tscn")
 
 func _on_Next_pressed():
 	if Autoload.current_level != len(Autoload.files) -1:
@@ -27,4 +28,5 @@ func _on_Replay_pressed():
 	restart()
 
 func _on_Home_pressed():
-	get_tree().change_scene("res://scene/MainMenu.tscn")
+	SceneChanger.goto_scene("res://scene/MainMenu.tscn", self)
+	#get_tree().change_scene("res://scene/MainMenu.tscn")

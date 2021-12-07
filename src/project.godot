@@ -58,6 +58,7 @@ config/icon="res://icon.png"
 
 Autoload="*res://scripts/autoload.gd"
 InputManager="*res://GDTIM-v1_1_0/InputManager.gd"
+SceneChanger="*res://scripts/SceneChanger.gd"
 
 [display]
 

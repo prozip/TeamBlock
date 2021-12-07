@@ -35,6 +35,7 @@ func generate_button(name : int):
 		level_gen.get_child(2).visible = true
 		level_gen.get_child(0).modulate = Color(1,1,1, 0.5)
 	level_gen.level_path = (name) # Onclick change to exact level
+	level_gen.obj = get_parent().get_parent().get_parent().get_parent()
 	self.add_child(level_gen)
 	
 	
