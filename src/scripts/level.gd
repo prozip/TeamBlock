@@ -120,7 +120,7 @@ func _ready():
 	generate_map()
 	if Autoload.current_level > 19:
 		$Particles.visible = true
-	$name.text = str(Autoload.current_level + 1)
+	$Control2/name.text = str(Autoload.current_level + 1)
 	
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))
@@ -134,5 +134,3 @@ func _on_Button_pressed():
 
 func _on_Pause_pressed():
 	get_tree().change_scene("res://scene/MainMenu.tscn")
-	
-	#$MenuContainer/PausePopup.pause_game()
