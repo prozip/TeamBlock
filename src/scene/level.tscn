@@ -16,17 +16,17 @@
 [ext_resource path="res://assets/fonts/A001ff-Bold.otf" type="DynamicFontData" id=15]
 [ext_resource path="res://UI/Level.png" type="Texture" id=16]
 
-[sub_resource type="Environment" id=11]
+[sub_resource type="Environment" id=1]
 background_mode = 4
 background_energy = 0.0
 background_canvas_max_layer = -1
 ambient_light_color = Color( 0.670588, 0.984314, 0.968627, 1 )
 
-[sub_resource type="StyleBoxTexture" id=12]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="ParticlesMaterial" id=13]
+[sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 2
 emission_box_extents = Vector3( 4, 1, 8 )
 direction = Vector3( 1, -2, 0 )
@@ -35,7 +35,7 @@ gravity = Vector3( 0, 0, 0 )
 initial_velocity = 4.5
 scale = 0.15
 
-[sub_resource type="SpatialMaterial" id=14]
+[sub_resource type="SpatialMaterial" id=4]
 flags_transparent = true
 params_billboard_mode = 3
 particles_anim_h_frames = 1
@@ -43,46 +43,46 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 albedo_texture = ExtResource( 14 )
 
-[sub_resource type="QuadMesh" id=15]
-material = SubResource( 14 )
-
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 12 )
-region_rect = Rect2( 0, 0, 160, 146 )
-
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 11 )
-region_rect = Rect2( 0, 0, 160, 146 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 12 )
-region_rect = Rect2( 0, 0, 160, 146 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 12 )
-region_rect = Rect2( 0, 0, 160, 146 )
+[sub_resource type="QuadMesh" id=5]
+material = SubResource( 4 )
 
 [sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region_rect = Rect2( 0, 0, 160, 146 )
 
 [sub_resource type="StyleBoxTexture" id=7]
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 160, 146 )
 
 [sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 160, 146 )
+
+[sub_resource type="StyleBoxTexture" id=13]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 128, 128 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=14]
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 301, 115 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=15]
 size = 120
 font_data = ExtResource( 15 )
 
@@ -139,7 +139,7 @@ smooth_speed = 2.0
 offset = Vector3( 19.78, 26.24, -7 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 11 )
+environment = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -153,7 +153,7 @@ margin_right = -2.24512
 margin_bottom = -2.24487
 rect_min_size = Vector2( 1366, 768 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 12 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -163,8 +163,8 @@ transform = Transform( 0.99993, 0, 0.0118505, 0, 1, 0, -0.0118505, 0, 0.99993, 9
 visible = false
 amount = 128
 visibility_aabb = AABB( -26.3134, -4, -26.1563, 52.6269, 8, 52.3125 )
-process_material = SubResource( 13 )
-draw_pass_1 = SubResource( 15 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -228,9 +228,9 @@ margin_top = 60.0
 margin_right = 240.0
 margin_bottom = 225.0
 rect_min_size = Vector2( 180, 165 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -245,7 +245,7 @@ margin_top = -75.0
 margin_right = 75.0
 margin_bottom = 75.0
 mouse_filter = 2
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -256,9 +256,9 @@ margin_top = 60.0
 margin_right = 440.0
 margin_bottom = 225.0
 rect_min_size = Vector2( 180, 165 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -273,7 +273,7 @@ margin_top = -60.0
 margin_right = 60.0
 margin_bottom = 60.0
 mouse_filter = 2
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -288,7 +288,7 @@ margin_top = 68.88
 margin_right = 1263.32
 margin_bottom = 248.88
 rect_min_size = Vector2( 80, 40 )
-custom_styles/panel = SubResource( 9 )
+custom_styles/panel = SubResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -302,7 +302,7 @@ margin_left = 1257.67
 margin_top = 92.7797
 margin_right = 1332.67
 margin_bottom = 228.78
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0.945098, 0.615686, 0.439216, 1 )
 text = "1"
 __meta__ = {

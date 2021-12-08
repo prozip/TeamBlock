@@ -7,10 +7,25 @@ onready var _anim_player := $AnimationPlayer
 
 func _ready() -> void: 
 	#play animation backward to face-in
-	_anim_player.play_backwards("Fade")
+	#_anim_player.play_backwards("Fade")
+	pass
 
 func transition_to(_next_scene := next_scene_path) ->void:
 	#Plays the Fade animation and wait until it finisheds
+	_anim_player.play("Fade")
+	yield(_anim_player, "animation_finished")
+	#changes the scene 
+	get_tree().change_scene(_next_scene)
+
+func transition_to2(_next_scene := next_scene_path) ->void:
+	#Plays the Fade animation and wait until it finisheds
+	$Panel.visible = false
+	$Panel2.visible = false
+	$"loading circle".visible = false
+	$line.visible = false
+	$TextureRect.visible = false
+	
+	
 	_anim_player.play("Fade")
 	yield(_anim_player, "animation_finished")
 	#changes the scene 
