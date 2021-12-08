@@ -127,12 +127,12 @@ func on_collide(obj, geo):
 
 func restart():
 	Autoload.full_reset()
-	SceneChanger.goto_scene("res://scene/level.tscn", self)
-	#get_tree().change_scene("res://scene/level.tscn")
+	get_tree().change_scene("res://scene/level.tscn")
 
 func _on_Button_pressed():
 	restart()
 
 func _on_Pause_pressed():
-	SceneChanger.goto_scene("res://scene/MainMenu.tscn", self)
+	get_tree().change_scene("res://scene/MainMenu.tscn")
+	
 	#$MenuContainer/PausePopup.pause_game()

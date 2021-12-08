@@ -210,8 +210,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SceneTransition" parent="Panel" instance=ExtResource( 12 )]
-visible = false
+[node name="SceneTransition" parent="." instance=ExtResource( 12 )]
 
 [connection signal="pressed" from="Panel/Panel/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Panel/Panel/Replay" to="." method="_on_Replay_pressed"]

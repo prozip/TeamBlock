@@ -14,10 +14,4 @@ func transition_to(_next_scene := next_scene_path) ->void:
 	_anim_player.play("Fade")
 	yield(_anim_player, "animation_finished")
 	#changes the scene 
-	SceneChanger.goto_scene(_next_scene, get_parent().get_parent())
-	#get_tree().change_scene(_next_scene)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	get_tree().change_scene(_next_scene)
