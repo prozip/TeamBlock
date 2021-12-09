@@ -13,19 +13,16 @@ func _ready():
 		else:
 			$Panel.get_stylebox("panel", "").texture = load("res://assets/Congrat/You win Snow.jpg")
 	$Panel/Label.text = " :  "+ str(Autoload.move_count)
-	
-func restart():
-	Autoload.full_reset()
-	$SceneTransition.transition_to("res://scene/level.tscn")
-	#get_tree().change_scene("res://scene/level.tscn")
 
 func _on_Next_pressed():
 	if Autoload.current_level != len(Autoload.files) -1:
 		Autoload.current_level += 1
-	restart()
+	Autoload.full_reset()
+	$SceneTransition.transition_to2("res://scene/level.tscn")
 
 func _on_Replay_pressed():
-	restart()
+	Autoload.full_reset()
+	$SceneTransition.transition_to2("res://scene/level.tscn")
 
 func _on_Home_pressed():
 	$SceneTransition.transition_to("res://scene/MainMenu.tscn")

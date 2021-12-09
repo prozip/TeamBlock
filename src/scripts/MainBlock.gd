@@ -82,7 +82,7 @@ func check_win():
 		Autoload.move = [false, false, false, false]
 		get_parent().get_node("Control2").visible = false
 		$Panel.visible = false
-		get_parent().get_node("SceneTransition").transition_to2("res://scene/Victory.tscn")
+		get_parent().get_node("SceneTransition").transition_to("res://scene/Victory.tscn")
 	else:
 		Autoload.reset_target()
 
