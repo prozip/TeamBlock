@@ -166,55 +166,6 @@ visibility_aabb = AABB( -26.3134, -4, -26.1563, 52.6269, 8, 52.3125 )
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 5 )
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="Control"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 2194.0
-margin_bottom = 1036.0
-rect_min_size = Vector2( 1366, 768 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="tut" type="TextureRect" parent="Control/Button2"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Control"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 2200.0
-margin_bottom = 1042.0
-rect_min_size = Vector2( 1366, 768 )
-script = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="tut" type="TextureRect" parent="Control/Button"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-expand = true
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Control2" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -309,9 +260,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Control/Button2" to="Control/Button" method="_on_Button2_pressed"]
-[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_Button_pressed"]
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2194.0
+margin_bottom = 1036.0
+rect_min_size = Vector2( 1366, 768 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tut" type="TextureRect" parent="Control/Button2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2200.0
+margin_bottom = 1042.0
+rect_min_size = Vector2( 1366, 768 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tut" type="TextureRect" parent="Control/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Control2/Restart" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control2/Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Control/Button2" to="Control/Button" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_Button_pressed"]
 
 [editable path="MainBlock"]
