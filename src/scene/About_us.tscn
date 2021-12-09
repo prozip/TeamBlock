@@ -1,0 +1,118 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/about us/background1.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/about us/Title.png" type="Texture" id=2]
+[ext_resource path="res://assets/about us/Text 1.png" type="Texture" id=3]
+[ext_resource path="res://assets/about us/Tb.png" type="Texture" id=4]
+[ext_resource path="res://assets/about us/Text 2.png" type="Texture" id=5]
+[ext_resource path="res://assets/about us/Icon_Back2.png" type="Texture" id=6]
+[ext_resource path="res://assets/about us/Btn_Back_p.png" type="Texture" id=7]
+[ext_resource path="res://assets/about us/Btn_Back_n.png" type="Texture" id=8]
+[ext_resource path="res://assets/about us/DA23.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1386, 668 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 108, 108 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DA23" type="TextureRect" parent="."]
+margin_left = 390.0
+margin_top = 36.0
+margin_right = 1202.0
+margin_bottom = 290.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Teamblock_title" type="TextureRect" parent="."]
+margin_left = 1160.0
+margin_top = 70.0
+margin_right = 1780.0
+margin_bottom = 295.0
+rect_min_size = Vector2( 620, 225 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titles" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -971.5
+margin_top = 230.0
+margin_right = 971.5
+margin_bottom = 565.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thanhvien" type="TextureRect" parent="."]
+margin_left = 600.0
+margin_top = 600.0
+margin_right = 1104.0
+margin_bottom = 679.0
+rect_pivot_offset = Vector2( -934.865, -282.432 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Member_name" type="TextureRect" parent="."]
+margin_left = 1075.0
+margin_top = 604.0
+margin_right = 1641.0
+margin_bottom = 873.0
+rect_pivot_offset = Vector2( -934.865, -282.432 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 150, 150 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

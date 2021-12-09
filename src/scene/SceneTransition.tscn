@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/SceneTransition.gd" type="Script" id=1]
 [ext_resource path="res://assets/loading/cir4.png" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/loading/cir8.png" type="Texture" id=7]
 [ext_resource path="res://assets/loading/cir5.png" type="Texture" id=8]
 [ext_resource path="res://assets/loading/cir2.png" type="Texture" id=9]
-[ext_resource path="res://assets/loading/2773349.png" type="Texture" id=10]
 [ext_resource path="res://assets/loading/bg_black.png" type="Texture" id=11]
 [ext_resource path="res://assets/loading/load2.png" type="Texture" id=12]
 [ext_resource path="res://assets/loading/load1.png" type="Texture" id=13]
@@ -32,8 +31,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 1920, 1200 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 11 )
