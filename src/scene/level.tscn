@@ -89,8 +89,6 @@ font_data = ExtResource( 15 )
 [node name="level" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="SceneTransition" parent="." instance=ExtResource( 7 )]
-
 [node name="MainBlock" parent="." instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
@@ -308,6 +306,8 @@ stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SceneTransition" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="Control2/Restart" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control2/Pause" to="." method="_on_Pause_pressed"]
