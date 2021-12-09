@@ -250,3 +250,4 @@ margin_bottom = 1.0
 [connection signal="pressed" from="Panel/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Panel/Continues" to="." method="_on_Continues_pressed"]
 [connection signal="pressed" from="Panel/Quit Game" to="." method="_on_Quit_Game_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]
