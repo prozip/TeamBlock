@@ -101,7 +101,6 @@ noise = SubResource( 6 )
 
 [sub_resource type="StreamTexture" id=8]
 flags = 23
-load_path = "res://.import/cubeworld_texture.tga-c18d2d50f29f4012cd049b5960bd5299.s3tc.stex"
 
 [sub_resource type="ShaderMaterial" id=9]
 resource_local_to_scene = true
