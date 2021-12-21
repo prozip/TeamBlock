@@ -309,6 +309,9 @@ __meta__ = {
 
 [node name="SceneTransition" parent="." instance=ExtResource( 7 )]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [connection signal="pressed" from="Control2/Restart" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control2/Pause" to="." method="_on_Pause_pressed"]
 [connection signal="pressed" from="Control/Button2" to="Control/Button" method="_on_Button2_pressed"]

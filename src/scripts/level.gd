@@ -114,14 +114,25 @@ func generate_map():
 		for j in len(line):
 			character = line[j]
 			addBlock(character, Vector2(i,-j))
-			
+
+func play_music(url):
+	var sfx = load(url)
+	$AudioStreamPlayer.stream = sfx
+	$AudioStreamPlayer.play()
+
 func _ready():
 	read_file(Autoload.files[Autoload.current_level])
 	generate_map()
 	if Autoload.current_level > 19:
 		$Particles.visible = true
 	$Control2/name.text = str(Autoload.current_level + 1)
-	
+	if Autoload.current_level <10:
+		play_music("res://assets/sound/ForestWalk-320bit.mp3")
+	elif Autoload.current_level <19:
+		play_music("res://assets/sound/Illusory-Realm-MP3.mp3")
+	else:
+		play_music('res://assets/sound/Neverland.mp3')
+
 func on_collide(obj, geo):
 	addBlock("1", Vector2(geo.x, geo.z))
 

@@ -20,7 +20,7 @@ func load_file():
 	unlock_level = config.get_value("Player1", "unlock_level")
 
 func _ready():
-	#save_file()
+	save_file()
 	load_file()
 	grid = get_node(grid)
 	for i in range(0,total_level):

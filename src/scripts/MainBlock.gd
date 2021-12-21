@@ -57,18 +57,25 @@ func _input(event):
 			Autoload.reset_move()
 			point = transform.origin + Vector3(0,0,-1)
 			can_move = false
+			$AudioStreamPlayer.play()
+			
 		elif (event.is_action_released("left") || swipe == 2) && Autoload.move[1]:
 			Autoload.reset_move()
 			point = transform.origin + Vector3(0,0,1)
 			can_move = false
+			$AudioStreamPlayer.play()
+			
 		elif (event.is_action_released("up") || swipe == 1) && Autoload.move[2]:
 			Autoload.reset_move()
 			point = transform.origin + Vector3(-1,0,0)
 			can_move = false
+			$AudioStreamPlayer.play()
+			
 		elif (event.is_action_released("down") || swipe == 3) && Autoload.move[3]:
 			Autoload.reset_move()
 			point = transform.origin + Vector3(1,0,0)
 			can_move = false
+			$AudioStreamPlayer.play()
 
 func check_win():
 	var total_block = $extendBlock.get_child_count()
