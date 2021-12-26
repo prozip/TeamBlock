@@ -35,12 +35,17 @@ func _on_Area5_body_entered(body):
 		body.on_collide($lava_block.visible)
 	elif body.is_in_group("hole"):
 		$AnimationPlayer.play("fall")
+	elif body.is_in_group("ground"):
+		if Autoload.current_level > 19:
+			body.get_child(0).visible = false
+			body.get_child(2).visible = true
 	elif body.is_in_group("ice"):
 		if body.get_child(1).visible:
 			body.get_child(1).visible = false
 		else:
 			$AnimationPlayer.play("fall")
 	elif body.is_in_group("lava") && !$lava_block.visible:
-		$mesh/DissolvingSphere.dissolve()
+		$mesh/Spatial/block_stone1_6_LOD1.visible = false
+		$mesh/Spatial/DissolvingSphere.dissolve()
 		#$mesh.visible = false
 		$lava_block.visible = true
