@@ -45,7 +45,6 @@ func _on_Area5_body_entered(body):
 		else:
 			$AnimationPlayer.play("fall")
 	elif body.is_in_group("lava") && !$lava_block.visible:
-		$mesh/Spatial/block_stone1_6_LOD1.visible = false
 		$mesh/Spatial/DissolvingSphere.dissolve()
 		#$mesh.visible = false
 		$lava_block.visible = true

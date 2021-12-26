@@ -5,7 +5,7 @@ onready var material := get_surface_material(0)
 
 
 func _ready() -> void:
-	material.set_shader_param("dissolve_amount", 0.0)
+	material.set_shader_param("dissolve_amount", 0)
 
 
 func dissolve():
