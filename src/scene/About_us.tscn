@@ -98,9 +98,11 @@ margin_top = 50.0
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 150, 150 )
+focus_mode = 0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
+enabled_focus_mode = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
