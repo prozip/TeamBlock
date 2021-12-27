@@ -37,7 +37,8 @@ func _on_Area5_body_entered(body):
 		$AnimationPlayer.play("fall")
 	elif body.is_in_group("ground"):
 		if Autoload.current_level > 19:
-			body.get_child(0).visible = false
+			body.get_child(4).stop()
+			body.get_child(4).play("snow_growing")
 			body.get_child(2).visible = true
 	elif body.is_in_group("ice"):
 		if body.get_child(1).visible:
