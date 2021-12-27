@@ -38,7 +38,7 @@ func _on_Area5_body_entered(body):
 	elif body.is_in_group("ground"):
 		if Autoload.current_level > 19:
 			body.get_child(4).stop()
-			body.get_child(0).get_child(3).transform.origin = Vector3(0,-0.605,0)
+			body.get_child(0).get_child(2).transform.origin = Vector3(0,-0.605,0)
 	elif body.is_in_group("ice"):
 		if body.get_child(1).visible:
 			body.get_child(1).visible = false
@@ -53,6 +53,6 @@ func _on_Area5_body_entered(body):
 func _on_Area5_body_exited(body):
 	if body.is_in_group("ground"):
 		if Autoload.current_level > 19:
-			body.get_child(0).get_child(3).transform.origin = Vector3(0,-0.5,0)
+			body.get_child(0).get_child(2).transform.origin = Vector3(0,-0.5,0)
 			body.get_child(4).play("snow_growing")
 			body.get_child(2).visible = true
