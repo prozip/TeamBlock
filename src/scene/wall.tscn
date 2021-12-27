@@ -99,7 +99,7 @@ mesh = SubResource( 6 )
 material/0 = null
 
 [node name="block2" type="MeshInstance" parent="mesh/block_ruby_LOD0"]
-transform = Transform( -4.37114e-08, -1.1, 0, 1, -4.80825e-08, 0, 0, 0, 1.1, 0.519579, 8.5585e-10, 0 )
+transform = Transform( -4.80825e-08, -1.1, 0, 1.1, -4.80825e-08, 0, 0, 0, 1.1, 0.519579, 8.5585e-10, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
 
