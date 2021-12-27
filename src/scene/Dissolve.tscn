@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Dissolve3D/DissolvingSphere.gd" type="Script" id=2]
 [ext_resource path="res://assets/Shader/dissolve.shader" type="Shader" id=3]
 
-[sub_resource type="ArrayMesh" id=8]
+[sub_resource type="ArrayMesh" id=1]
 resource_name = "block_stone1_6_LOD0"
 surfaces/0 = {
 "aabb": AABB( -0.557677, -0.564388, -0.556663, 1.11542, 1.10543, 1.11543 ),
@@ -19,34 +19,34 @@ surfaces/0 = {
 "vertex_count": 1471
 }
 
-[sub_resource type="OpenSimplexNoise" id=9]
+[sub_resource type="OpenSimplexNoise" id=2]
 period = 34.0
 persistence = 0.141
 lacunarity = 2.84
 
-[sub_resource type="NoiseTexture" id=11]
+[sub_resource type="NoiseTexture" id=3]
 seamless = true
-noise = SubResource( 9 )
+noise = SubResource( 2 )
 
-[sub_resource type="StreamTexture" id=12]
+[sub_resource type="StreamTexture" id=4]
 flags = 23
 load_path = "res://.import/cubeworld_texture.tga-c18d2d50f29f4012cd049b5960bd5299.s3tc.stex"
 
-[sub_resource type="ShaderMaterial" id=10]
+[sub_resource type="ShaderMaterial" id=5]
 shader = ExtResource( 3 )
 shader_param/albedo = Color( 1, 1, 1, 0 )
 shader_param/emission_color = Color( 0.972549, 0.27451, 0.0588235, 1 )
 shader_param/emission_amount = 0.5
 shader_param/burn_size = 0.1
 shader_param/dissolve_amount = 0.5
-shader_param/texture_albedo = SubResource( 12 )
-shader_param/dissolve_texture = SubResource( 11 )
+shader_param/texture_albedo = SubResource( 4 )
+shader_param/dissolve_texture = SubResource( 3 )
 
 [node name="Spatial" type="Spatial"]
 
 [node name="DissolvingSphere" type="MeshInstance" parent="."]
-mesh = SubResource( 8 )
-material/0 = SubResource( 10 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
 script = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="DissolvingSphere"]
