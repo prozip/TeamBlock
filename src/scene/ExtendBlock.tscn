@@ -365,3 +365,4 @@ omni_range = 0.507162
 [connection signal="body_entered" from="area_collections/Area3" to="." method="_on_Area3_body_entered"]
 [connection signal="body_entered" from="area_collections/Area4" to="." method="_on_Area4_body_entered"]
 [connection signal="body_entered" from="area_collections/Area5" to="." method="_on_Area5_body_entered"]
+[connection signal="body_exited" from="area_collections/Area5" to="." method="_on_Area5_body_exited"]
