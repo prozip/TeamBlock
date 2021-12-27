@@ -95,6 +95,7 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="Spatial" type="Spatial" parent="mesh"]
+visible = false
 
 [node name="Cube_White_Brick" type="MeshInstance" parent="mesh/Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0 )
