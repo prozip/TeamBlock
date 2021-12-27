@@ -196,7 +196,6 @@ mesh = SubResource( 10 )
 material/0 = null
 
 [node name="earth" type="Spatial" parent="."]
-visible = false
 
 [node name="Earth" type="MeshInstance" parent="earth"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55, 0 )
