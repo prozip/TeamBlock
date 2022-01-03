@@ -1,7 +1,7 @@
 shader_type spatial;
 render_mode depth_draw_alpha_prepass, cull_disabled;
 
-uniform vec4 albedo : hint_color = vec4(255.00,255.00,255.00,0.00);
+uniform vec4 albedo : hint_color;
 uniform sampler2D texture_albedo : hint_albedo;
 
 uniform vec4 emission_color : hint_color = vec4(1);
