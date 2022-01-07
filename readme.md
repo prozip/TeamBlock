@@ -6,17 +6,17 @@ TeamBlock is a 3D puzzle game inspired by Sokoban Japanese game (倉庫番, Souk
 
 Download [here]([Releases · prozip/TeamBlock (github.com)](https://github.com/prozip/TeamBlock/releases))
 
-#### 1. How to play
+### 1. How to play
 
 move and connect the block to a target location
 
-#### 2. Instructions
+### 2. Instructions
 
 Keyboard (PC): **WASD** - MainBlock movement. **Mouse-Scroll** to zoom, **Mouse-Middle-Drag** to move camera
 
 Touch (Android): **Swipe** - MainBlock movement. **Pinch** to zoom, **2-finger Drag** to move camera
 
-#### 3. Level mapping
+### 3. Level mapping
 
 File type: cfg
 
@@ -36,7 +36,7 @@ Characters mapping table:
 | l         | lava                 |
 | i         | ice                  |
 
-#### 4. Credits
+### 4. Credits
 
 Engine: Godot 3.3.3 - open source
 
