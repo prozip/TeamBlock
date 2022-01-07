@@ -4,7 +4,7 @@
 
 TeamBlock is a 3D puzzle game inspired by Sokoban Japanese game (倉庫番, Souko-ban)
 
-Download [here]([Releases · prozip/TeamBlock (github.com)](https://github.com/prozip/TeamBlock/releases))
+Download [here](https://github.com/prozip/TeamBlock/releases/)
 
 ### 1. How to play
 
