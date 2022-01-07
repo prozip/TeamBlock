@@ -21,7 +21,6 @@ class custom_sorter:
 		return false
 
 func _ready():
-	print('global run')
 	load_level()
 
 func load_level():

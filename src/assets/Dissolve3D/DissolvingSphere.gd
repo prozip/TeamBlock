@@ -9,7 +9,6 @@ func _ready() -> void:
 
 
 func dissolve():
-	print("disolve")
 	self.visible = true
 	$"../block_stone1_6_LOD1".visible = false
 	tween.interpolate_method(

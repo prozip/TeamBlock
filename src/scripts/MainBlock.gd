@@ -15,7 +15,6 @@ var point
 onready var Scene_Transition = preload("res://scene//SceneTransition.tscn")
 
 func _ready():
-	print("main block run")
 	point = transform.origin
 	
 func detect_swipe():
